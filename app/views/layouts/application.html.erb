@@ -8,34 +8,25 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-custom navbar-static-top">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="/">Airbnb</a>
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li> 
-        <li><a href="#">Page 3</a></li> 
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="listings/new">Become a host</a></li>
+        <li><a href="listings">Show listings</a></li> 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">.col-md-8</div>
 
-
-
-    <div class="col-md-4">.col-md-4</div>
-  </div>  
-</div>
 
 
 
@@ -56,16 +47,7 @@
 </div>
 
 <div class="container">
-
-    <button type="button" class="btn btn-default btn-lg">Default</button>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-warning btn-xs"> Warning</button>
-    <button type="button" class="btn btn-danger glyphicon glyphicon-remove"> Danger</button>
-    <button type="button" class="btn btn-link">Link</button>
-
-<%= yield %>
+  <%= yield %>
 </div>
 </body>
 </html>

@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.integer  "user_id"
   end
 
+  create_table "listings", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.date     "start"
+    t.date     "end"
+    t.integer  "price"
+    t.integer  "num_of_guest"
+    t.string   "room_type"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "listings", ["user_id"], name: "index_listings_on_user_id"
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -30,7 +45,6 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.string   "encrypted_password", limit: 128
     t.string   "confirmation_token", limit: 128
     t.string   "remember_token",     limit: 128
-    t.integer  "user_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email"
