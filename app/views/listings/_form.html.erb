@@ -11,7 +11,8 @@
   </div>
 <%end%>
 
-<%= form_for @listing  do |f| %> 
+<%= form_for @listing do |f| %> 
+  <!-- html: {multipart: true}  -->
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>

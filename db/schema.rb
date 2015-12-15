@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.integer  "price"
     t.integer  "num_of_guest"
     t.string   "room_type"
+    t.string   "picture"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "picture"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"
