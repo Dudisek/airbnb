@@ -18,6 +18,7 @@ class ListingsController < ApplicationController
 	end
 
 	def create
+		byebug
 		@listing = current_user.listings.new(listing_params)
 		if @listing.save
 			
@@ -44,7 +45,7 @@ class ListingsController < ApplicationController
 
 private
 	def listing_params
-		params.require(:listing).permit(:name, :body, :start, :end, :price, :num_of_guest, :room_type, :picture)
+		params.require(:listing).permit(:name, :body, :start, :end, :price, :num_of_guest, :room_type, {picture: []})
 	end
 end
 

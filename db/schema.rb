@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 201512100104529) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "authentications", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -30,17 +33,22 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.integer  "price"
     t.integer  "num_of_guest"
     t.string   "room_type"
-    t.string   "picture"
+    t.json     "picture"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
-  add_index "listings", ["user_id"], name: "index_listings_on_user_id"
+  add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
+    t.date     "birthday"
+    t.string   "phone"
+    t.text     "about"
+    t.string   "picture"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.string   "encrypted_password", limit: 128
@@ -48,7 +56,8 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.string   "remember_token",     limit: 128
   end
 
-  add_index "users", ["email"], name: "index_users_on_email"
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
+  add_foreign_key "listings", "users"
 end

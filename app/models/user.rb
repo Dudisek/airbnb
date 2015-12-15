@@ -5,10 +5,13 @@ class User < ActiveRecord::Base
   has_many :authentications, :dependent => :destroy
 
   has_many :listings
+
+  mount_uploader :picture, PictureUploader  
   
   def self.create_with_auth_and_hash(authentication,auth_hash)
     create! do |u|
-      u.name = auth_hash["info"]["name"]
+      u.first_name = auth_hash["info"]["first_name"]
+      u.last_name = auth_hash["info"]["last_name"]
       u.email = auth_hash["extra"]["raw_info"]["email"]
       u.authentications<<(authentication)
     end

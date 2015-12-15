@@ -11,8 +11,7 @@
   </div>
 <%end%>
 
-<%= form_for @listing do |f| %> 
-  <!-- html: {multipart: true}  -->
+<%= form_for @listing, html: {multipart: true} do |f| %> 
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -52,7 +51,7 @@
   </p>  
   <p>
   <%= f.label :picture %>
-  <%= f.file_field :picture, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
+  <%= f.file_field :picture, multiple: true, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
   </p>
   <p>
     <%= f.submit %>

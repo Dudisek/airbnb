@@ -1,4 +1,11 @@
 <h1>User Information</h1>
 
-Name: <%= @user.name%> <br>
+First Name: <%= @user.first_name%> <br>
+Last Name: <%= @user.last_name%> <br>
+Email: <%= @user.email%> <br>
+Birthday: <%= @user.birthday%> <br>
+Phone: <%= @user.phone%> <br>
+About: <%= @user.about%> <br>
+<%= image_tag @user.picture.url if @user.picture? %>
+
 Email: <%= @user.email%>
