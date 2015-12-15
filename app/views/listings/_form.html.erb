@@ -1,0 +1,61 @@
+<%if @listing.errors.any?%>
+  <div class="alert alert-danger" role="alert">
+  <h2><%=pluralize(@listing.errors.count, "errror")%> prohibited this listing from being saved:</h2>
+    <div class="alert alert-warning" role="alert">
+      <ol>
+      <%@listing.errors.full_messages.each do |error| %>
+      <li> <%=error%>. <br></li>
+      <%end%>
+      </ol>
+    </div>
+  </div>
+<%end%>
+
+<%= form_for @listing  do |f| %> 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :start %><br>
+    <%= f.date_field :start %>
+  </p>
+
+  <p>
+    <%= f.label :end %><br>
+    <%= f.date_field :end %>
+  </p> 
+
+  <p>
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </p>     
+
+  <p>
+    <%= f.label :number_of_guests %><br>
+<%= select(:listing, :num_of_guest, [[1], [2], [3], [4], [5], [6], [7], [8]]) %>
+  </p>  
+  <p>
+    <%= f.label :room_type %><br>
+	<%= radio_button "listing" ,:room_type, "Entire home" %>
+	<%= label_tag(:room_home, "Entire Home") %> &nbsp; | 
+	<%= radio_button "listing", :room_type, "Private room" %>
+	<%= label_tag(:room_private, "Private room") %> &nbsp; | 
+	<%= radio_button "listing", :room_type, "Shared room" %>
+	<%= label_tag(:room_shared, "Shared room") %> &nbsp;
+  </p>  
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :body %>
+  </p>  
+  <p>
+    UPLOAD
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', listings_path %>
