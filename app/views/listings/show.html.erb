@@ -4,6 +4,8 @@
 
 		<h1>Listing: <%= @listing.name %></h1>
 
+		<%= image_tag @listing.picture.url if @listing.picture? %>
+
 		<p>
 		  <strong>Name:</strong>
 		  <%= @listing.name %>

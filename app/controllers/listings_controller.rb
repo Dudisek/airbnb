@@ -18,12 +18,15 @@ class ListingsController < ApplicationController
 	end
 
 	def create
+		byebug
 		@listing = current_user.listings.new(listing_params)
+		
 		if @listing.save
-  		redirect_to @listing
-  	else
-  		render 'new'
-  	end
+			
+  			redirect_to @listing
+  		else
+  			render 'new'
+  		end
 	end
 	
 	def show
@@ -43,7 +46,7 @@ class ListingsController < ApplicationController
 
 private
 	def listing_params
-		params.require(:listing).permit(:name, :body, :start, :end, :price, :num_of_guest, :room_type, )
+		params.require(:listing).permit(:name, :body, :start, :end, :price, :num_of_guest, :room_type, :picture)
 	end
 end
 

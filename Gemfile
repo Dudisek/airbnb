@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-
-
+# Image
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
+gem 'mini_magick'
+# lOgin
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'clearance'
