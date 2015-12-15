@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-
-# Image
+# Sensitive info
+gem 'figaro'
+# Images upload
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 # lOgin
