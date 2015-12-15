@@ -7,5 +7,5 @@ class Listing < ActiveRecord::Base
   # validates :num_of_guest, presence: true
   # validates :room_type, presence: true
 
-  mount_uploader :picture, PictureUploader
+  mount_uploaders :picture, PictureUploader
 end
