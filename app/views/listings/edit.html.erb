@@ -3,3 +3,7 @@
 <%= render 'form' %> 
 
 <%= link_to 'Back', listings_path %>
+
+<%= link_to 'Delete', listing_path(@listing),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>

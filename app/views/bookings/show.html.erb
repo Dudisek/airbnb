@@ -1,0 +1,15 @@
+<h1>Booking information</h1>
+
+Property: <%= @booking.check_in%> <br>
+Check-in: <%= @booking.check_in%> <br>
+Check-out: <%= @booking.check_out%> <br>
+By : <%= @booking.user_id%> <br>
+
+<br>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %>
+
+
+<%= link_to 'Cancel booking', booking_path(@booking),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>

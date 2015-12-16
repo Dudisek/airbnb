@@ -3,14 +3,13 @@ class User < ActiveRecord::Base
   include Clearance::User
  
   has_many :authentications, :dependent => :destroy
-
   has_many :listings
+  has_many :bookings
 
   mount_uploader :picture, PictureUploader  
   
   def self.create_with_auth_and_hash(authentication,auth_hash)
     create! do |u|
-      byebug
       u.first_name = auth_hash["info"]["name"]
       u.picture = auth_hash["info"]["image"]         
       u.email = auth_hash["extra"]["raw_info"]["email"]

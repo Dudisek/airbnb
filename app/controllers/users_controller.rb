@@ -16,6 +16,14 @@ class UsersController < Clearance::UsersController
 		end
 	end
 
+	# def destroy
+	#   @user = User.find(params[:id])
+	#   @user.destroy
+	 
+	#   redirect_to '/'
+	# end
+
+
 private
 	def user_params
 		params.require(:user).permit(:first_name, :last_name, :birthday, :phone, :about, :picture, :email)
