@@ -1,71 +1,76 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
+<div class="row">
+  <div class="panel panel-default">
+	<div class="panel-body">
 
-		<h1>Listing: <%= @listing.name %></h1>
 
-		<%= image_tag @listing.picture[0].url if @listing.picture? %>
+		<div class="col-md-7">
 
-		<p>
-		  <strong>Name:</strong>
-		  <%= @listing.name %>
-		</p>
-		<p>
-		  <strong>Description:</strong>
-		  <%= @listing.body %>
-		</p>
-		<p>
-		  <strong>Start Date:</strong>
-		  <%= @listing.start %>
-		</p>
-		<p>
-		  <strong>End Date:</strong>
-		  <%= @listing.end %>
-		</p>
-		<p>
-		  <strong>Price:</strong>
-		  <%= @listing.price %>
-		</p>
-		<p>
+		<br>
+		<%= image_tag @listing.picture[0].main.url if @listing.picture? %>
+		<br><br>
+		<%= image_tag @listing.picture[1].thumb.url if @listing.picture? %>
+		</div> 	<!-- col-md-3 -->
+
+		<div class="col-md-5">
+			<h1><strong> <%= @listing.name%></strong></h1>
+			<% @listing.tags.any? %>
+			<% @listing.tags.each do |tag| %>
+			<span class="label label-info tags"><%= tag %></span>
+			<% end %>
+			<br><br>
+			<p><strong>By:</strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%>
+				<p><strong>Availibility:</strong><br>
+				<%=@listing.start%> - <%=@listing.end%></p>
+				</p>
+				<p><strong>City:</strong> <%=@listing.address_city%></p>
+				
+				
+				<p><strong>Cost per night:</strong></p><p> £ <%= @listing.price %></p>
+				<%= button_to "Book NOW", new_listing_booking_path(@listing), 
+				      :class => "btn btn-danger btn-lg", :method => :get %>
+
+
+			<%= link_to 'Edit', edit_listing_path(@listing) %>
+		</div> <!-- col-md-6 -->
+
+    </div>	
+  </div>
+    <div class="col-md-4">
+		<p class="glyphicon glyphicon-home">
 		  <strong>Room type:</strong>
 		  <%= @listing.room_type %>
 		</p>
-		<p>
+		<p class="glyphicon glyphicon-user">
 		  <strong>Number of guests:</strong>
 		  <%= @listing.num_of_guest %>
 		</p>
+		<p class="glyphicon glyphicon-pencil">
+		  <strong>Description:</strong>
+		  <%= @listing.body %>
+		</p>
 
 
-		<% @listing.tags.any? %>
-		<% @listing.tags.each do |tag| %>
-		<%= tag %>
-		<% end %>
-
-		<%= link_to 'Book NOW', new_listing_booking_path(@listing) %>
-		<br>
-
-		<%= link_to 'Edit', edit_listing_path(@listing) %> | 
-		<%= link_to 'Back', listings_path %> 
-
-	</div> 	<!-- col-md-8 -->
-
+	</div>
 
     <div class="col-md-4">
     	<h1>User Details</h1>
 
     	<p>
 		  <strong>Name:</strong>
-		  <%= @user.id %>
+		  <%= @user.first_name %> <%= @user.last_name %>
 		</p>
 		<p>
 		  <strong>Description:</strong>
-		  <%= @user.first_name %>
+		  <%= @user.about %>
 		</p>
+		Contact Details
 		<p>
-		  <strong>Start Date:</strong>
 		  <%= @user.email %>
+		  <%= @user.phone %>
 		</p>
 
     </div> <!-- col-md-4 -->
-  </div>  
-</div>
+
+
+</div>  
+

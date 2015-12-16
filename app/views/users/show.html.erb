@@ -1,12 +1,41 @@
-<h1>User Information</h1>
 
-First Name: <%= @user.first_name%> <br>
-Last Name: <%= @user.last_name%> <br>
-Email: <%= @user.email%> <br>
-Birthday: <%= @user.birthday%> <br>
-Phone: <%= @user.phone%> <br>
-About: <%= @user.about%> <br>
+<div class="row">
+  <div class="panel panel-default">
+	<div class="panel-body">
 
-<%= image_tag @user.picture.url if @user.picture? %>
 
-Email: <%= @user.email%>
+		<div class="col-md-3">
+
+			  <h1><strong> <%= @user.first_name%> <%=@user.last_name%></strong></h1>
+				<p><strong>Email:</strong> <%=@user.email%></p>
+				<p><strong>Phone:</strong> <%=@user.phone%></p>
+				<p><strong>Born:</strong> <%= @user.birthday%></p>
+				<p><strong>About me</strong></p><p> <%= @user.about %></p>
+
+			<%= link_to 'Edit', edit_user_path(@user) %>
+		</div> <!-- col-md-6 -->
+		<div class="col-md-3">
+		<br>
+			<%= image_tag @user.picture.thumb.url, :class => 'img-thumbnail' if @user.picture?%>
+		</div>		
+	
+
+
+
+					<div class="col-md-3">
+
+						<h3>Your Booking</h3>
+
+					</div> 	<!-- col-md-3 -->
+
+					<div class="col-md-3">
+
+						<h3>Your Listings</h3>
+
+					</div> 	<!-- col-md-3 -->
+
+    </div>	
+  </div>
+
+</div>  
+
