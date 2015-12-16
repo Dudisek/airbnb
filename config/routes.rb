@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :listings
-  resources :users, only: [:show, :edit, :update]  
+  resources :users, only: [:show, :edit, :update]
+  # resources 
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

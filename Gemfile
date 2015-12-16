@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
+
 # Sensitive info
 gem 'figaro'
 # Images upload
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
+# Amazon S3
+gem 'fog'
+
 # lOgin
 gem 'omniauth'
 gem 'omniauth-facebook'
