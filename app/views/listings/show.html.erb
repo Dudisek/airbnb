@@ -35,6 +35,12 @@
 		  <%= @listing.num_of_guest %>
 		</p>
 
+
+		<% @listing.tags.any? %>
+		<% @listing.tags.each do |tag| %>
+		<%= tag %>
+		<% end %>
+
 		<%= link_to 'Book NOW', new_listing_booking_path(@listing) %>
 		<br>
 

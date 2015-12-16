@@ -53,6 +53,12 @@
   <%= f.label :picture %>
   <%= f.file_field :picture, multiple: true, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
   </p>
+
+  <p>
+  <%= f.label :tags %>
+  <%= f.text_field :tag_list %>
+  </p>
+
   <p>
     <%= f.submit %>
   </p>

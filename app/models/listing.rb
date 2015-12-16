@@ -3,8 +3,9 @@ class Listing < ActiveRecord::Base
   has_many :bookings
   validates :name, presence: true
 
-  has_many :listing_tags
-  has_many :tags, through: :listing_tags
+  # attr_accessible :tag_list
+  acts_as_taggable_on :tags
+
   # validates :body, presence: true
   # validates :start, presence: true
   # validates :end, presence: true

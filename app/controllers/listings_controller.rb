@@ -42,9 +42,17 @@ class ListingsController < ApplicationController
 		redirect_to listings_path
 	end
 
+	def tagged
+	  if params[:tag].present? 
+	    @listings = List.tagged_with(params[:tag])
+	  else 
+	    @listings = List.postall
+	  end  
+	end
+
 private
 	def listing_params
-		params.require(:listing).permit(:name, :body, :start, :end, :price, :num_of_guest, :room_type, {picture: []})
+		params.require(:listing).permit(:name, :body, :start, :end, :price, :num_of_guest, :room_type, :tag_list, {picture: []})
 	end
 end
 

@@ -8,6 +8,9 @@ gem 'mini_magick'
 # Amazon S3
 gem 'fog'
 
+# Tags
+gem 'acts-as-taggable-on'
+
 # lOgin
 gem 'omniauth'
 gem 'omniauth-facebook'

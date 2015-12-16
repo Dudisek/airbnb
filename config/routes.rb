@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
   root 'home#index'
 
+
+
   resources :listings, shallow: true do
-    resources :bookings
+  get 'tagged' => 'posts#tagged', :as => 'tagged'
+  resources :bookings
   end
   resources :users, only: [:show, :edit, :update, :destroy]
   
