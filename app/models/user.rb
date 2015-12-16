@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :listings
   has_many :bookings
 
+
   mount_uploader :picture, PictureUploader  
   
   def self.create_with_auth_and_hash(authentication,auth_hash)

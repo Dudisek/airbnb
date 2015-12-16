@@ -9,6 +9,7 @@ class CreateListings < ActiveRecord::Migration
       t.integer :num_of_guest
       t.string :room_type
       t.json :picture
+      t.address :address
 
       t.references :user, index: true, foreign_key: true
 

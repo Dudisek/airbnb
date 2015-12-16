@@ -13,3 +13,11 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+
+window.googleMapInitialize = function(){
+
+    // Simple usage
+    $('.jt-address-autocomplete').jt_address();
+
+};
+

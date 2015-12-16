@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+
+# Address
+gem 'jt-rails-address'
+
 # Sensitive info
 gem 'figaro'
 # Images upload

@@ -1,0 +1,65 @@
+<%if @listing.errors.any?%>
+  <div class="alert alert-danger" role="alert">
+  <h2><%=pluralize(@listing.errors.count, "errror")%> prohibited this listing from being saved:</h2>
+    <div class="alert alert-warning" role="alert">
+      <ol>
+      <%@listing.errors.full_messages.each do |error| %>
+      <li> <%=error%>. <br></li>
+      <%end%>
+      </ol>
+    </div>
+  </div>
+<%end%>
+
+<%= form_for @listing do |f| %> 
+
+  <p>
+    <%= f.label :street_number %><br>
+    <%= f.text_field :address_street_number %>
+  </p>  
+
+  <p>
+    <%= f.label :street %><br>
+    <%= f.text_field :address_street %>
+  </p>  
+
+  <p>
+    <%= f.label :city %><br>
+    <%= f.text_field :address_city %>
+  </p>
+
+  <p>
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :address_zip_code %>
+  </p>    
+
+  <p>
+    <%= f.label :State %><br>
+    <%= f.text_field :address_state %>
+  </p>    
+
+   <p>
+    <%= f.label :Country %><br>
+    <%= f.text_field :address_country %>
+  </p>    
+
+    <div class="jt-address-autocomplete">
+        <!-- This field is used to search the address on Google Maps -->
+        <%= f.text_field :address, class: 'jt-address-search' %>
+
+        <!-- All fields are hidden because the javascript will set their value automatically -->
+        <% for attr in JT::Rails::Address.fields %>
+            <%= f.hidden_field "address_#{attr}", class: "jt-address-field-#{attr}" %>
+        <% end %>
+    </div>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', listings_path %>
+
+
+<script async type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&callback=googleMapInitialize"></script>

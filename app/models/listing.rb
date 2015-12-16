@@ -2,6 +2,7 @@ class Listing < ActiveRecord::Base
   belongs_to :user
   has_many :bookings
   validates :name, presence: true
+  has_address :address
 
   # attr_accessible :tag_list
   acts_as_taggable_on :tags
