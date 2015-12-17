@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# EMAIL
-gem 'mail'
-
 # Address
 gem 'jt-rails-address'
 

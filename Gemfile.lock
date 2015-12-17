@@ -332,7 +332,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jt-rails-address
-  mail
   mini_magick
   omniauth
   omniauth-facebook
