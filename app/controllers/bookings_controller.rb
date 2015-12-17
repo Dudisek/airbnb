@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
 	def create
 		@booking = current_user.bookings.new(bookings_params)
 
-		if @booking.save
+		if @booking.save	
 			redirect_to @booking
 		else
 			render 'new'
@@ -40,7 +40,7 @@ class BookingsController < ApplicationController
 
 private
 	def bookings_params
-		params.require(:booking).permit(:guests, :check_in, :check_out)
+		params.require(:booking).permit(:guests, :check_in, :check_out, :listing_id)
 	end
 
 	def set_booking

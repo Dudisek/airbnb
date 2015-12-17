@@ -4,6 +4,8 @@
 				<li>
 					 <div class="row">
 							<div class="col-md-12">
+
+
 								Login via
 								<div class="social-buttons">
 									<a href="/auth/facebook" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
@@ -12,16 +14,18 @@
                                 or
 								 <form class="form" role="form" method="post" action="<%=session_path%>" accept-charset="UTF-8" id="login-nav">
 										<div class="form-group">
-											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+											 <label class="sr-only" for="session_email">Email address</label>
+											 <input type="email" class="form-control" id="session_email" placeholder="Email address" name="session[email]" required>
+
+
 										</div>
 										<div class="form-group">
-											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+											 <label class="sr-only" for="session_password">Password</label>
+											 <input type="password" name="session[password]" class="form-control" id="session_password" placeholder="Password" required>
                                              <div class="help-block text-right"><a href="/passwords/new">Forget the password ?</a></div>
 										</div>
 										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+											 <button type="submit" value="Sign in" name="commit" class="btn btn-primary btn-block">Sign in</button>
 										</div>
 										<div class="checkbox">
 											 <label>
