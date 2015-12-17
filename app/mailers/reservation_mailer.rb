@@ -1,7 +1,9 @@
 class ReservationMailer < ApplicationMailer
-	def booking_email(first_name, host, booking_id)
-		@host = host
+	def booking_email(customer, listing, booking)
 		@customer = customer
-		@booking_id = booking_id
+		@listing = listing
+		@booking = booking
+		byebug		
+		mail(to: @listing.user.email, subject: "You have received a booking from #{@customer.first_name}.")
 	end
 end

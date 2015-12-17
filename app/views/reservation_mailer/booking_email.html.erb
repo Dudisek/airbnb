@@ -5,9 +5,23 @@
 	</head>
 
 	<body>
-		<h1>Congratulations! You have received a booking from <%=customer.first_name%></h1>	
+		<h1>Congratulations! You have received a booking from <%=@customer.first_name%></h1> to your listing <%=@listing.name%>
+
 		<p>
-			You can see details of your new reservation here: <%= @url %>
+		Date: 
+		Check in: <%=@booking.check_in%><br>
+		Check out: <%=@booking.check_out%><br>
+		Number of guests: <%=@booking.guests%>
+		<p>
+			You can see details of your <a href="/users/<%=@listing.user_id%>">new reservation here.</a>	
 		</p>
+		<p>
+		If you have any question, please do not hesitate to contact us or the user directly on email <%=@customer.email%> or phone <%=@customer.phone%>. 
+
+		<p>
+		Thank you
+		</p>
+		Petr Duda<br>
+		AirBnB Team
 	</body>
 </html>

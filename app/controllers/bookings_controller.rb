@@ -9,7 +9,8 @@ class BookingsController < ApplicationController
 	def create
 		@booking = current_user.bookings.new(bookings_params)
 
-		if @booking.save	
+		if @booking.save
+			ReservationMailer.booking_email(@booking.user, @booking.listing, @booking).deliver_now	
 			redirect_to @booking
 		else
 			render 'new'
