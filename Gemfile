@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Address
 gem 'jt-rails-address'
 
+#faker
+gem 'faker'
 # Sensitive info
 gem 'figaro'
 # Images upload
