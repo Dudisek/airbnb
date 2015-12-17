@@ -5,18 +5,30 @@
 	</head>
 
 	<body>
-		<h1>Congratulations! You have received a booking from <%=@customer.first_name%></h1> to your listing <%=@listing.name%>
+		<h1>Congratulations!</h1>
+		<hr>
+		<p>You have received a booking from <strong><%=@customer.first_name%> <%=@customer.last_name%></strong></p>
 
 		<p>
-		Date: 
-		Check in: <%=@booking.check_in%><br>
-		Check out: <%=@booking.check_out%><br>
-		Number of guests: <%=@booking.guests%>
+		<h3>Your listing: <%=@listing.name%></h3>
+		<strong>Check in:</strong> <%=@booking.check_in%><br>
+		<strong>Check out:</strong> <%=@booking.check_out%><br>
+		<strong>Guests:</strong> <%=@booking.guests%><br>
+		<strong>Price: </strong> <%=@listing.price%>
 		<p>
-			You can see details of your <a href="/users/<%=@listing.user_id%>">new reservation here.</a>	
+			You can see details of your reservation with a click of the button below:
+            <table class="btn-primary" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td>
+                  <a href="http://localhost:3000/users/<%=@listing.user_id%>"><strong>Manage your booking</strong>.</a>
+                </td>
+              </tr>
+            </table>
+
+				
 		</p>
 		<p>
-		If you have any question, please do not hesitate to contact us or the user directly on email <%=@customer.email%> or phone <%=@customer.phone%>. 
+		If you have any questions, please do not hesitate to contact us or the user directly on email <%=@customer.email%> or phone <%=@customer.phone%>. 
 
 
 		<p>

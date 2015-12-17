@@ -3,7 +3,6 @@ class ReservationMailer < ApplicationMailer
 		@customer = customer
 		@listing = listing
 		@booking = booking
-		byebug		
-		mail(to: @listing.user.email, subject: "You have received a booking from #{@customer.first_name}.")
+		mail(to: @listing.user.email, subject: "[AirBnB] You have received a booking from #{@customer.first_name}.")
 	end
 end
