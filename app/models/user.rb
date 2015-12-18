@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :listings
   has_many :bookings
 
+  has_many :transactions, foreign_key: :user_id
 
   mount_uploader :picture, PictureUploader  
   

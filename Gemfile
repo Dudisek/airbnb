@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
+# Payment transaction
+gem "braintree"
 
+# Background server
 gem 'sidekiq'
 # Address
 gem 'jt-rails-address'

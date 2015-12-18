@@ -4,6 +4,8 @@ class Listing < ActiveRecord::Base
   validates :name, presence: true
   has_address :address
 
+  has_many :transactions
+
   # attr_accessible :tag_list
   acts_as_taggable_on :tags
 
