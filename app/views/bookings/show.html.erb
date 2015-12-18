@@ -1,9 +1,12 @@
 <h1>Booking information</h1>
 
-Property: <%= @booking.check_in%> <br>
+Property: <%= @booking.listing.name%> <br>
 Check-in: <%= @booking.check_in%> <br>
 Check-out: <%= @booking.check_out%> <br>
-By : <%= @booking.user_id%> <br>
+Guests: <%= @booking.guests%> <br>
+By : <%= @booking.user.first_name%> <br><br>
+
+Total cost: <%= @booking.amount%> <br>
 
 <br>
 

@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-# Payment
-gem 'braintree'
+# Payment transaction
+gem "braintree"
 
-# Backwork server for mailer
+# Background server
 gem 'sidekiq'
 # Address
 

@@ -103,7 +103,10 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.integer  "buyer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.integer  "amount"
+=======
+>>>>>>> fc19cfd319efb20e8d7da8ca4b9143c4ad9a2455
   end
 
   create_table "users", force: :cascade do |t|
