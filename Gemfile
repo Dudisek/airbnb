@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
+# Payment
+gem 'braintree'
 
+# Backwork server for mailer
 gem 'sidekiq'
 # Address
+
 gem 'jt-rails-address'
 
 #faker

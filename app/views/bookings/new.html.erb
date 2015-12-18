@@ -17,7 +17,7 @@
     <%= f.label :guests %><br>
 <%= select(:booking, :guests, [[1], [2], [3], [4], [5], [6], [7], [8]]) %>
   </p>  
-
+  <div id="payment-form"></div>
   <p>
     <%= f.submit %>
   </p>
@@ -25,3 +25,24 @@
 <% end %>
  
 <%= link_to 'Back', @listing %>
+
+
+
+<!-- 
+<form id="checkout" method="post" action="/bookings">
+
+
+  <input type="submit" value="Pay $10">
+</form>
+ -->
+
+
+<script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+<script>
+// We generated a client token for you so you can test out this code
+// immediately. In a production-ready integration, you will need to
+// generate a client token on your server (see section below).
+braintree.setup('<%= @client_token %>', "dropin", {
+  container: "payment-form"
+});
+</script>
