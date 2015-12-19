@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Airbnb</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -65,7 +64,7 @@
   </div>
 </nav>
 
-<div class="container">
+
 <br><br><br>
 
 
@@ -114,8 +113,15 @@
   <%= yield %>
 
 
-</div>
+  </div>
+<%= render 'layouts/footer' %>
 
-</div>
+<!-- <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+</footer> -->
+
+
 </body>
 </html>

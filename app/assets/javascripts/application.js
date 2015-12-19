@@ -13,11 +13,26 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jt_address
 
+// This function is call when Google Maps is loaded
 window.googleMapInitialize = function(){
 
     // Simple usage
     $('.jt-address-autocomplete').jt_address();
 
+
 };
 
+
+
+// #LISTING
+// $(window).scroll(function(){
+//   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
+// });
+
+
+
+
+
+//  BELOW JUST JQUERY SLIDER SLIDER SLIDEEEER

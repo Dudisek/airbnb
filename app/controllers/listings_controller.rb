@@ -19,8 +19,15 @@ class ListingsController < ApplicationController
 
 	def create
 		@listing = current_user.listings.new(listing_params)
+		byebug
 		if @listing.save
 			
+			# data = JT::Rails::Address.search("Eiffel Tower", "YOUR GOOGLE API KEY")
+
+			# Use the data retrieve from Google Maps API
+			# my_instance.load_address(:address, data)
+
+
   			redirect_to @listing
   		else
   			render 'new'
@@ -52,7 +59,7 @@ class ListingsController < ApplicationController
 
 private     
 	def listing_params
-		params.require(:listing).permit(:name,:body, :start, :end, :price, :num_of_guest, :room_type, :tag_list, :address_street_number, :address_street, :address_city, :address_zip_code, :address_state, :address_country, {picture: []})
+		params.require(:listing).permit(:name,:body, :start, :end, :price, :num_of_guest, :room_type, :tag_list, :address_street_number, :address_street, :address_city, :address_zip_code, :address_state, :address_country, :address_formatted_address, :address_lat, :address_lng, {picture: []})
 	end 
 end
 

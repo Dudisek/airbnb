@@ -1,13 +1,13 @@
 
 
 <%= form_for [@listing, @booking] do |f| %>  
-  <%= f.hidden_field :listing_id, value: @listing.id %>
+  
 
   <p>
     <%= f.label :check_in %><br>
     <%= f.date_field :check_in %>
   </p>
-
+    <%= f.hidden_field :listing_id, value: @listing.id %>
   <p>
     <%= f.label :check_out %><br>
     <%= f.date_field :check_out %>
@@ -19,7 +19,7 @@
   </p>  
   <div id="payment-form"></div>
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Submit', :class => 'btn btn-default' %>
   </p>
  
 <% end %>

@@ -3,7 +3,6 @@ class Listing < ActiveRecord::Base
   has_many :bookings
   validates :name, presence: true
   has_address :address
-
   has_many :transactions
 
   # attr_accessible :tag_list

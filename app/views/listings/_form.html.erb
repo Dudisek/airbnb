@@ -61,6 +61,48 @@
 
 
   <p>
+    <%= f.label :street_number %><br>
+    <%= f.text_field :address_street_number %>
+  </p>  
+
+  <p>
+    <%= f.label :street %><br>
+    <%= f.text_field :address_street %>
+  </p>  
+
+  <p>
+    <%= f.label :city %><br>
+    <%= f.text_field :address_city %>
+  </p>
+
+  <p>
+    <%= f.label :zip_code %><br>
+    <%= f.text_field :address_zip_code %>
+  </p>    
+
+  <p>
+    <%= f.label :State %><br>
+    <%= f.text_field :address_state %>
+  </p>    
+
+   <p>
+    <%= f.label :Country %><br>
+    <%= f.text_field :address_country %>
+  </p>    
+
+    <div class="jt-address-autocomplete">
+        <!-- This field is used to search the address on Google Maps -->
+        <%= f.text_field :address, class: 'jt-address-search' %>
+
+        <!-- All fields are hidden because the javascript will set their value automatically -->
+        <% for attr in JT::Rails::Address.fields %>
+            <%= f.hidden_field "address_#{attr}", class: "jt-address-field-#{attr}" %>
+        <% end %>
+    </div>
+
+
+
+  <p>
     <%= f.submit %>
   </p>
  

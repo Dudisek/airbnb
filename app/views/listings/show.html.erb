@@ -13,8 +13,8 @@
 		</div> 	<!-- col-md-3 -->
 
 		<div class="col-md-5">
-			<div class="jumbotron"
-			<h1><strong> <%= @listing.name%></strong></h1>
+			<div class="jumbotron" id="scroll-with-me">
+			<h3><strong> <%= @listing.name%></strong></h3>
 			<% @listing.tags.any? %>
 			<% @listing.tags.each do |tag| %>
 			<span class="label label-info tags"><%= tag %></span>
