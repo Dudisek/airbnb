@@ -26,8 +26,6 @@ class ListingsController < ApplicationController
 
 			# Use the data retrieve from Google Maps API
 			# my_instance.load_address(:address, data)
-
-
   			redirect_to @listing
   		else
   			render 'new'

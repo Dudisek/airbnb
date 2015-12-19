@@ -1,19 +1,50 @@
+<div class="container">
 <div class="row">
-  <div class="panel panel-default">
-	<div class="panel-body">
 
 
-		<div class="col-md-7">
+	<div class="col-md-8">
 
-		<br>
+
+		<h1><%=@listing.name%>, <small><%=@listing.address_city%> <%=@listing.address_state%></small></h1>
+
 		<%= image_tag @listing.picture[0].main.url, class: "img-responsive" if @listing.picture? %>
 
 		<br><br>
-		<%= image_tag @listing.picture[1].thumb.url if @listing.picture? %>
-		</div> 	<!-- col-md-3 -->
 
-		<div class="col-md-5">
-			<div class="jumbotron" id="scroll-with-me">
+		<% @listing.picture.each do |pic| %>
+			<img src="<%=pic.thumb.url%>" />
+		<%end%>
+
+	    <div class="col-md-4">
+				<p class="glyphicon glyphicon-home">
+				  <strong>Room type:</strong>
+				  <%= @listing.room_type %>
+				</p>
+				<p class="glyphicon glyphicon-user">
+				  <strong>Number of guests:</strong>
+				  <%= @listing.num_of_guest %>
+				</p>
+				<p class="glyphicon glyphicon-pencil">
+				  <strong>Description:</strong>
+				  <%= @listing.body %>
+				</p>
+			</div>
+
+
+	</div> 	<!-- col-md-8 -->
+
+
+
+
+
+
+
+
+
+
+		<div class="col-md-4">
+		<h1>&nbsp</h1>
+			<div class="booking-red" id="scroll-with-me">
 			<h3><strong> <%= @listing.name%></strong></h3>
 			<% @listing.tags.any? %>
 			<% @listing.tags.each do |tag| %>
@@ -34,46 +65,10 @@
 
 			<%= link_to 'Edit', edit_listing_path(@listing) %>
 			</div>
-		</div> <!-- col-md-6 -->
-
-    </div>	
-  </div>
-    <div class="col-md-4">
-		<p class="glyphicon glyphicon-home">
-		  <strong>Room type:</strong>
-		  <%= @listing.room_type %>
-		</p>
-		<p class="glyphicon glyphicon-user">
-		  <strong>Number of guests:</strong>
-		  <%= @listing.num_of_guest %>
-		</p>
-		<p class="glyphicon glyphicon-pencil">
-		  <strong>Description:</strong>
-		  <%= @listing.body %>
-		</p>
+		</div> <!-- col-md-4 -->
 
 
-	</div>
-
-    <div class="col-md-4">
-    	<h1>User Details</h1>
-
-    	<p>
-		  <strong>Name:</strong>
-		  <%= @user.first_name %> <%= @user.last_name %>
-		</p>
-		<p>
-		  <strong>Description:</strong>
-		  <%= @user.about %>
-		</p>
-		Contact Details
-		<p>
-		  <%= @user.email %>
-		  <%= @user.phone %>
-		</p>
-
-    </div> <!-- col-md-4 -->
 
 
-</div>  
 
+</div>
