@@ -1,7 +1,65 @@
-<h1>Create a new List</h1>
+<%= form_for @listing, html: {multipart: true} do |f| %> 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
  
-<%= render 'form' %>
+  <p>
+    <%= f.label :start %><br>
+    <%= f.date_field :start %>
+  </p>
+
+  <p>
+    <%= f.label :end %><br>
+    <%= f.date_field :end %>
+  </p> 
+
+  <p>
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </p>     
+
+  <p>
+    <%= f.label :number_of_guests %><br>
+<%= select(:listing, :num_of_guest, [[1], [2], [3], [4], [5], [6], [7], [8]]) %>
+  </p>  
+  <p>
+    <%= f.label :room_type %><br>
+	<%= radio_button "listing" ,:room_type, "Entire home" %>
+	<%= label_tag(:room_home, "Entire Home") %> &nbsp; | 
+	<%= radio_button "listing", :room_type, "Private room" %>
+	<%= label_tag(:room_private, "Private room") %> &nbsp; | 
+	<%= radio_button "listing", :room_type, "Shared room" %>
+	<%= label_tag(:room_shared, "Shared room") %> &nbsp;
+  </p>  
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :body %>
+  </p>  
+  <p>
+  <%= f.label :picture %>
+  <%= f.file_field :picture, multiple: true, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
+  </p>
+
+  <p>
+  <%= f.label :tags %>
+  <%= f.text_field :tag_list %>
+  </p>
+  <%= f.label :address %>
+    <div class="jt-address-autocomplete">
+      <!-- This field is used to search the address on Google Maps -->
+      <%= f.text_field :address, class: 'jt-address-search' %>
+
+      <!-- All fields are hidden because the javascript will set their value automatically -->
+      <% for attr in JT::Rails::Address.fields %>
+          <%= f.hidden_field "address_#{attr}", class: "jt-address-field-#{attr}" %>
+      <% end %>
+    </div>
+
+  <p>
+    <%= f.submit %>
+  </p>
  
-<%= link_to 'Back', listings_path %>
+<% end %>
 
 <script async type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&callback=googleMapInitialize"></script>

@@ -20,8 +20,6 @@ window.googleMapInitialize = function(){
 
     // Simple usage
     $('.jt-address-autocomplete').jt_address();
-
-
 };
 
 
@@ -30,7 +28,7 @@ window.googleMapInitialize = function(){
 $(window).scroll(function(){
   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
 });
-
+$("#footer").html(totaltext);
 
 
 

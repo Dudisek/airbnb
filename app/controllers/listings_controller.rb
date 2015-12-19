@@ -52,12 +52,12 @@ class ListingsController < ApplicationController
 	    @listings = List.tagged_with(params[:tag])
 	  else 
 	    @listings = List.postall
-	  end  
+	  end
 	end
 
 private     
 	def listing_params
-		params.require(:listing).permit(:name,:body, :start, :end, :price, :num_of_guest, :room_type, :tag_list, :address_street_number, :address_street, :address_city, :address_zip_code, :address_state, :address_country, :address_formatted_address, :address_lat, :address_lng, {picture: []})
+		params.require(:listing).permit(:name, :body, :start, :end, :price, :num_of_guest, :room_type, :tag_list, :address, :address_formatted_address, :address_street_number, :address_street_name, :address_street, :address_city, :address_zip_code, :address_department, :address_department_code, :address_state, :address_state_code, :address_country, :address_country_code, :address_lat, :address_lng, {picture: []})
 	end 
 end
 
