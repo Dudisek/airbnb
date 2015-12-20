@@ -65,18 +65,12 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.integer  "user_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
   end
 
   add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
-
-  create_table "payments", force: :cascade do |t|
-    t.integer  "buyer_id"
-    t.integer  "listing_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "payments", ["listing_id", "buyer_id"], name: "index_payments_on_listing_id_and_buyer_id", unique: true, using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -103,10 +97,6 @@ ActiveRecord::Schema.define(version: 201512100104529) do
     t.integer  "buyer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-    t.integer  "amount"
-=======
->>>>>>> fc19cfd319efb20e8d7da8ca4b9143c4ad9a2455
   end
 
   create_table "users", force: :cascade do |t|

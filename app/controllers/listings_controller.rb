@@ -19,6 +19,7 @@ class ListingsController < ApplicationController
 
 	def create
 		@listing = current_user.listings.new(listing_params)
+		@listing.address = @listing.address_formatted_address
 		byebug
 		if @listing.save
 			

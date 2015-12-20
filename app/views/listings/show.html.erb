@@ -59,6 +59,14 @@
 			</div>
 		</div> <!-- col-md-4 -->
 
+		<%if @listing.nearbys(100).nil?%>
+		<%else%>
+		<h3>Nearby</h3>		
+
+		<% for listing in @listing.nearbys(100, {:units => :km})%>
+		<li><%= link_to listing.name, listing %> (<%= listing.distance.round(2) %> km)</div>
+		<%end%>
+		<%end%>
 </div>
 
 </div>
