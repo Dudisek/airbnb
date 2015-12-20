@@ -28,8 +28,6 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
-        
-        <li class="active"><a href="#"># <span class="sr-only">(current)</span></a></li>
         <% if !signed_in? %>
         <li><a href="sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <%= render 'sessions/navlogin'%>
@@ -38,15 +36,10 @@
         <%if current_user.listings.any?%>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Your listing <span class="badge"><%=current_user.listings.count%></span></a>
           <ul class="dropdown-menu" role="menu">
-
-
-
-            <li><a href="#"><i class="fa fa-fw fa-tag"></i> <span class="badge">Music</span> sayfası <span class="badge">Video</span> sayfasında etiketlendi</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Music</span> sayfasında iletiniz beğenildi</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Video</span> sayfasında iletiniz beğenildi</a></li>
-            <li><a href="#"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">Game</span> sayfasında iletiniz beğenildi</a></li>
-            <hr>
-            <li><a href="/listings/new"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="badge">New</span>Create New Listing</a></li>
+          <%current_user.listings.each do |list|%>
+            <li><a href="#"><i class="fa fa-fw fa-tag"></i><%=list.name%></a></li>
+            <%end%><hr>
+            <li><a href="/listings/new"><i class="fa fa-fw fa-thumbs-o-up"></i>Create New Listing<span class="badge">free</span></a></li>
           </ul>
         </li>
         <%else%>
@@ -55,16 +48,15 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Welcome <%= current_user.first_name %> <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="/users/<%=current_user.id%>">View Profile</a></li>
-              <li><a href="/users/<%=current_user.id%>/edit">Edit Profile</a></li>
+              <li><a href="/users/<%=current_user.id%>">Manage Account</a></li>
               <li role="separator" class="divider"></li>
-              <li><%= button_to 'Sign out', sign_out_path, class: "btn btn-link", method: :delete %></li>
+              <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
             </ul>
           </li>
         <%end%>
       </ul>
-      <form class="navbar-form navbar-right search-form" role="search">
-        <input type="text" class="form-control" placeholder="Search" />
+      <form class="navbar-form navbar-right search-form" method="get" action="<%=listings_path%>" role="search">
+        <input type="text" class="form-control" placeholder="Where you want to go?" />
       </form>
     </div>
   </div>

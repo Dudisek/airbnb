@@ -23,6 +23,7 @@ class ListingsController < ApplicationController
 		if @listing.save
   			redirect_to @listing
   		else
+  			flash[:alert] = "We did not find anything. Here is a list you can choose from: "
   			render 'new'
   		end
 	end
@@ -34,9 +35,10 @@ class ListingsController < ApplicationController
 	end
 
 	def index
-		byebug
 		if params[:search].present?
-			@listings = Listing.near(params[:search], 50, order: "distance")
+			
+			@listings_near = Listing.near(params[:search], 50, order: "distance")
+			@listings = Listing.all
 		else
 			@listings = Listing.all
 		end

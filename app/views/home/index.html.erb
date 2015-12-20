@@ -10,8 +10,8 @@
 	  <div class="input-group col-md-8 col-centered">
 					<%= text_field_tag :search, params[:search], placeholder: "Search places you'd love to visit", class: 'search-query form-control search-big' %>
 					<span class="input-group-btn col-centered">
-							<%= button_tag type: 'button', class: 'btn btn-danger btn-lg' do %>
-							<span class=" glyphicon glyphicon-search"></span>
+							<%= button_tag type: 'submit', class: 'btn btn-danger btn-lg' do %>
+							<span class="glyphicon glyphicon-search"></span>
 						<%end%>
 					</span>
 		</div>
@@ -25,56 +25,56 @@
 
   <div class="row" id="places">
     <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/1.png" class="thumbnail img-responsive">
         </a>
     </div>
      <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/2.jpg" class="thumbnail img-responsive">
         </a>
     </div>
      <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/3.jpg" class="thumbnail img-responsive">
         </a>
     </div>
      <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/4.jpg" class="thumbnail img-responsive">
         </a>
     </div>
   </div>
   <div class="row">  
     <div class="col-lg-4 col-sm-6 col-xs-12">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/9.jpg" class="thumbnail img-responsive">
         </a>
     </div>
      <div class="col-lg-4 col-sm-6 col-xs-12">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/10.jpg" class="thumbnail img-responsive">
         </a>
     </div>
   </div>  
   <div class="row">  
     <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/5.jpg" class="thumbnail img-responsive">
         </a>
     </div>
     <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/6.jpg" class="thumbnail img-responsive">
         </a>
     </div>
     <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/7.jpg" class="thumbnail img-responsive">
         </a>
     </div>
     <div class="col-lg-2 col-sm-3 col-xs-4">
-        <a href="#">
+        <a href="<%=listings_path%>">
              <img src="img/gallery/8.jpg" class="thumbnail img-responsive">
         </a>
     </div> 
@@ -87,7 +87,7 @@
 <hr>
 
 <center>
-<p class="lead">Don't worry, be happy. With our <code>GUARANTEE</code> program you have nothing to lose. <code>Travel, enjoy, learn and live</code> anywhere and anytime in the whole World. Find your place <code>now</code>.</p>
+<p class="lead">Don't worry, be happy. With our <code>GUARANTEE</code> program you have nothing to lose. <code>Travel, enjoy, learn and live</code> anywhere and anytime in the whole World. <a href="#search">Find your place <code>now</code></a>.</p>
 <p>TESTIMONIALS HERE</p>
 </center>
 
