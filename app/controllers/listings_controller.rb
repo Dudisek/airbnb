@@ -34,7 +34,12 @@ class ListingsController < ApplicationController
 	end
 
 	def index
-		@listings = Listing.all
+		byebug
+		if params[:search].present?
+			@listings = Listing.near(params[:search], 50, order: "distance")
+		else
+			@listings = Listing.all
+		end
 	end
 
 	def destroy

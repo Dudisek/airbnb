@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- MAP GOOGLE -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%ENV['GOOGLE_MAP']%>  
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP']%>  
 &callback=initMap" async defer></script>
   <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8">
@@ -58,7 +58,7 @@
               <li><a href="/users/<%=current_user.id%>">View Profile</a></li>
               <li><a href="/users/<%=current_user.id%>/edit">Edit Profile</a></li>
               <li role="separator" class="divider"></li>
-              <li><%= button_to 'Sign out', sign_out_path, class: "btn btn-danger", method: :delete %></li>
+              <li><%= button_to 'Sign out', sign_out_path, class: "btn btn-link", method: :delete %></li>
             </ul>
           </li>
         <%end%>
