@@ -38,7 +38,7 @@ window.googleMapInitialize = function(){
       }
 
 
-
+// # LISTING BOOKING SCROLLING DIFFERENT SOLUTION
 // $(document).ready(function() {
 //   $('#scroll-with-me').scrollToFixed();
 //   $('#footer').scrollToFixed( { bottom: 0, limit: $('#footer').offset().top } );  
