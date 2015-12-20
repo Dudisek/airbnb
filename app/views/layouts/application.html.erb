@@ -5,8 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- MAP GOOGLE -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPnzCJnV5tUuOi2l_s6oSJMGM5H_UR5-c  
+&callback=initMap" async defer></script>
   <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8">
+  <!-- END MAP GOOGLE -->
 </head>
 <body>
 
@@ -70,11 +74,6 @@
 <br><br><br>
 
 
-
-
-
-<div>
-
   <!-- Nav tabs -->
 <!--   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
@@ -115,7 +114,6 @@
   <%= yield %>
 
 
-  </div>
 <%= render 'layouts/footer' %>
 
 <!-- <footer class="footer">

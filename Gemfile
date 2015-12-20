@@ -6,9 +6,10 @@ gem "braintree"
 
 # Background server
 gem 'sidekiq'
-# Address
 
+# Address & Google maps
 gem 'jt-rails-address'
+gem 'geocoder'
 
 #faker
 gem 'faker'

@@ -23,11 +23,19 @@ window.googleMapInitialize = function(){
 };
 
 
-// #LISTING
-$(window).scroll(function(){
-  $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
-});
+// // #LISTING
+// $(window).scroll(function(){
+//   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
+// });
 
+// # MAP
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 49.6929469, lng: 18.34807390000003},
+          zoom: 15
+        });
+      }
 
 
 

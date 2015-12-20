@@ -1,0 +1,11 @@
+<h1>All listings</h1>
+<% @listings.each do |list| %>
+<ul>
+<li><%= list.name %>
+<%= link_to 'Show', listing_path(list) %> | <%= link_to 'Edit', edit_listing_path(list) %> | 
+  <%= link_to 'Delete', listing_path(list),
+      		method: :delete,
+      		data: { confirm: "Are you sure?" } %></li>
+</ul>
+<%end%>
+

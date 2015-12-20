@@ -1,7 +1,8 @@
+
 <div class="container">
 <div class="row">
 
-
+	
 	<div class="col-md-8">
 
 
@@ -11,11 +12,12 @@
 
 		<br><br>
 
+
+
 		<% @listing.picture.each do |pic| %>
 			<img src="<%=pic.thumb.url%>" />
 		<%end%>
 
-	    <div class="col-md-4">
 				<p class="glyphicon glyphicon-home">
 				  <strong>Room type:</strong>
 				  <%= @listing.room_type %>
@@ -28,8 +30,6 @@
 				  <strong>Description:</strong>
 				  <%= @listing.body %>
 				</p>
-			</div>
-
 
 	</div> 	<!-- col-md-8 -->
 
@@ -59,36 +59,12 @@
 			</div>
 		</div> <!-- col-md-4 -->
 
+</div>
+
+</div>
+
+	<div id="map"> </div>	
 
 
 
-
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-    </style>
-
-    <div id="map"></div>
-    <script>
-
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
-  });
-}
-
-    </script>
-
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-DyA8fXxHsxqJ4zg7rxM3NFQKI2lFPdI	
-&callback=initMap"
-        async defer></script>
 

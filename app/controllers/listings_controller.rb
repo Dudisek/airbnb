@@ -34,7 +34,7 @@ class ListingsController < ApplicationController
 	
 	def show
 		@listing = Listing.find(params[:id])
-		@map = JT::Rails::Address.search("#{@listing.address_formatted_address}", "AIzaSyAPnzCJnV5tUuOi2l_s6oSJMGM5H_UR5-c")
+		# @map = JT::Rails::Address.search("#{@listing.address_formatted_address}", "AIzaSyAPnzCJnV5tUuOi2l_s6oSJMGM5H_UR5-c")
 		@user = User.find(@listing.user_id)
 	end
 
