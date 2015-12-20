@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- MAP GOOGLE -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPnzCJnV5tUuOi2l_s6oSJMGM5H_UR5-c  
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%ENV['GOOGLE_MAP']%>  
 &callback=initMap" async defer></script>
   <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8">

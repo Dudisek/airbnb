@@ -21,11 +21,6 @@ class ListingsController < ApplicationController
 		@listing = current_user.listings.new(listing_params)
 		byebug
 		if @listing.save
-			
-			# data = JT::Rails::Address.search("Eiffel Tower", "YOUR GOOGLE API KEY")
-
-			# Use the data retrieve from Google Maps API
-			# my_instance.load_address(:address, data)
   			redirect_to @listing
   		else
   			render 'new'

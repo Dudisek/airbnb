@@ -63,7 +63,7 @@
 		<%else%>
 		<h3>Nearby</h3>		
 
-		<% for listing in @listing.nearbys(100, {:units => :km})%>
+		<% for listing in @listing.nearbys(100)%>
 		<li><%= link_to listing.name, listing %> (<%= listing.distance.round(2) %> km)</div>
 		<%end%>
 		<%end%>
