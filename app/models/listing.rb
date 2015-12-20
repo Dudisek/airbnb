@@ -5,8 +5,9 @@ class Listing < ActiveRecord::Base
   validates :name, presence: true
   has_address :address
   acts_as_taggable_on :tags
-  geocoded_by :address
+ 
   after_validation :geocode
+  geocoded_by :address_formatted_address, :latitude  => :address_lat, :longitude => :address_lng
 
 
 
