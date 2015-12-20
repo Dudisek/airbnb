@@ -3,7 +3,6 @@ class Listing < ActiveRecord::Base
   has_many :bookings
   validates :name, presence: true
   has_address :address
-  has_many :transactions
   acts_as_taggable_on :tags
 
   # validates :body, presence: true

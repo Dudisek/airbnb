@@ -23,14 +23,18 @@ window.googleMapInitialize = function(){
 };
 
 
-
 // #LISTING
 $(window).scroll(function(){
   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
 });
-$("#footer").html(totaltext);
 
 
+
+
+// $(document).ready(function() {
+//   $('#scroll-with-me').scrollToFixed();
+//   $('#footer').scrollToFixed( { bottom: 0, limit: $('#footer').offset().top } );  
+// });
 
 
 //  BELOW JUST JQUERY SLIDER SLIDER SLIDEEEER

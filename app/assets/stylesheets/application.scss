@@ -46,8 +46,7 @@ nav.navbar-findcond span.badge.new { background: rgba(255, 0, 0, 0.8); color: #f
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 
-
-
+/* LOGIN ELEMENT */
 
 #login-dp{
     min-width: 250px;
@@ -108,20 +107,26 @@ nav.navbar-findcond span.badge.new { background: rgba(255, 0, 0, 0.8); color: #f
         border-top:0 none;
     }
 }
+/* END OGIN ELEMENT */
 
+
+.h1-top-margin {
+  margin-top: 0px;
+}
 
 .col-centered{
-  display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
+.search-big {
+  height: 45px;
+}
 
 .booking-red {
-  border: 2px;
   padding: 20px;
-  border-color: #ccc; 
-  box-shadow: 0 0 2px 0 #ccc;
+  box-shadow: 0px 0px 0px 2px #d75452;
+  border-radius: 10px;
 
 }
 
@@ -136,14 +141,6 @@ nav.navbar-findcond span.badge.new { background: rgba(255, 0, 0, 0.8); color: #f
 }
 /* Since positioning the image, we need to help out the caption */
 
-
-#style-back{
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
-  border-radius: 20px;
-  padding-top: 0px;
-}
-
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
@@ -157,8 +154,12 @@ nav.navbar-findcond span.badge.new { background: rgba(255, 0, 0, 0.8); color: #f
   height: 500px;
 }
 
-#scroll-with-me {
-  position: fixed;
+/* END OF SLIDER */
+
+
+#style-back{
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  border-radius: 20px;
+  padding-top: 0px;
 }
-
-
