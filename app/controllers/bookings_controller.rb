@@ -20,13 +20,12 @@ class BookingsController < ApplicationController
 			# byebug
 			if result.success?
 				@booking.save
-				ReservationJob.perform_later(@booking.user, @booking.listing, @booking)
+				# ReservationJob.perform_later(@booking.user, @booking.listing, @booking)
       	redirect_to @booking, notice: "Congraulations! Your transaction has been successfully!" and return
 	  	end
 	  end
 	  flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
 	  client_token = generate_client_token
-  	@listing = Listing.find(params[:listing_id])
 	  render 'new'
 
 	end

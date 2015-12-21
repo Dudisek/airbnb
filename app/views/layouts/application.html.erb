@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Airbnb</title>
+  <!-- BRAINTREE -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js', 'data-turbolinks-track' => true %>
@@ -16,52 +17,7 @@
 <body>
 
 
-<nav class="navbar navbar-findcond navbar-fixed-top">
-    <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Airbnb</a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <% if !signed_in? %>
-        <li><a href="sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <%= render 'sessions/navlogin'%>
-        <%else%>
-        <li class="dropdown">
-        <%if current_user.listings.any?%>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-fw fa-bell-o"></i> Your listing <span class="badge"><%=current_user.listings.count%></span></a>
-          <ul class="dropdown-menu" role="menu">
-          <%current_user.listings.each do |list|%>
-            <li><a href="#"><i class="fa fa-fw fa-tag"></i><%=list.name%></a></li>
-            <%end%><hr>
-            <li><a href="/listings/new"><i class="fa fa-fw fa-thumbs-o-up"></i>Create New Listing<span class="badge">free</span></a></li>
-          </ul>
-        </li>
-        <%else%>
-          <li><a href="/listings/new">Become host</a></li>
-        <%end%>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Welcome <%= current_user.first_name %> <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/users/<%=current_user.id%>">Manage Account</a></li>
-              <li role="separator" class="divider"></li>
-              <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
-            </ul>
-          </li>
-        <%end%>
-      </ul>
-      <form class="navbar-form navbar-right search-form" method="get" action="<%=listings_path%>" role="search">
-        <input type="text" class="form-control" placeholder="Where you want to go?" />
-      </form>
-    </div>
-  </div>
-</nav>
+<%= render '/layouts/navigation' %>
 
 
 <br><br><br>

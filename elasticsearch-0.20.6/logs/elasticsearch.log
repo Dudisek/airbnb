@@ -712,3 +712,21 @@ java.io.IOException: Expected handle header, got [13]
 [2015-12-21 16:34:02,740][INFO ][http                     ] [Nico Minoru] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
 [2015-12-21 16:34:02,740][INFO ][node                     ] [Nico Minoru] {0.20.6}[26397]: started
 [2015-12-21 16:34:03,428][INFO ][gateway                  ] [Nico Minoru] recovered [1] indices into cluster_state
+[2015-12-21 16:44:04,289][INFO ][node                     ] [Nico Minoru] {0.20.6}[26397]: stopping ...
+[2015-12-21 16:44:04,363][INFO ][node                     ] [Nico Minoru] {0.20.6}[26397]: stopped
+[2015-12-21 16:44:04,364][INFO ][node                     ] [Nico Minoru] {0.20.6}[26397]: closing ...
+[2015-12-21 16:44:04,373][INFO ][node                     ] [Nico Minoru] {0.20.6}[26397]: closed
+[2015-12-21 16:44:14,102][INFO ][node                     ] [Thor] {0.20.6}[26943]: initializing ...
+[2015-12-21 16:44:14,106][INFO ][plugins                  ] [Thor] loaded [], sites []
+[2015-12-21 16:44:15,813][INFO ][node                     ] [Thor] {0.20.6}[26943]: initialized
+[2015-12-21 16:44:15,813][INFO ][node                     ] [Thor] {0.20.6}[26943]: starting ...
+[2015-12-21 16:44:15,917][INFO ][transport                ] [Thor] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-21 16:44:18,990][INFO ][cluster.service          ] [Thor] new_master [Thor][CcFUKzRdQu-_KCgTlEuznQ][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-21 16:44:19,066][INFO ][discovery                ] [Thor] elasticsearch/CcFUKzRdQu-_KCgTlEuznQ
+[2015-12-21 16:44:19,083][INFO ][http                     ] [Thor] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-21 16:44:19,083][INFO ][node                     ] [Thor] {0.20.6}[26943]: started
+[2015-12-21 16:44:19,660][INFO ][gateway                  ] [Thor] recovered [1] indices into cluster_state
+[2015-12-21 17:01:00,811][INFO ][node                     ] [Thor] {0.20.6}[26943]: stopping ...
+[2015-12-21 17:01:00,878][INFO ][node                     ] [Thor] {0.20.6}[26943]: stopped
+[2015-12-21 17:01:00,878][INFO ][node                     ] [Thor] {0.20.6}[26943]: closing ...
+[2015-12-21 17:01:00,886][INFO ][node                     ] [Thor] {0.20.6}[26943]: closed
