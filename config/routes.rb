@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
 
   resources :listings, shallow: true do
-  get 'tagged' => 'posts#tagged', :as => 'tagged'
-  resources :bookings
+    get 'tagged' => 'posts#tagged', :as => 'tagged'
+    resources :bookings
   end
   resources :users, only: [:show, :edit, :update, :destroy]
   

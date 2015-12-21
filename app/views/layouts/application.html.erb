@@ -4,6 +4,7 @@
   <title>Airbnb</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- MAP GOOGLE -->
   <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP']%>  
@@ -86,7 +87,7 @@
 
 
 <!-- Button trigger modal -->
-
+<div class="container">
 <%=render 'users/new'%>
 
     <div id="flash">
@@ -94,7 +95,7 @@
         <div class="flash <%= key %>"><%= value %></div>
       <% end %>
     </div>
-
+</div>
 <!-- 
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Login-pop">
     Launch Normal Form

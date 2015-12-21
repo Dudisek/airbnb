@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Booking information</h1>
 
 Property: <%= @booking.listing.name%> <br>
@@ -16,3 +17,4 @@ Total cost: <%= @booking.amount%> <br>
 <%= link_to 'Cancel booking', booking_path(@booking),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
+</div>

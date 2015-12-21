@@ -48,7 +48,7 @@
             </p>  
             <p>
               <%= f.label :pictures %>: 
-              <%= f.file_field :picture, type: "button", class: "btn btn-default btn-sm", value: "Choose photos", multiple: true, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
+              <%= f.file_field :picture, class: "btn btn-default btn-sm", value: "Choose photos", multiple: true, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
             </p>
 
             <p>
@@ -68,7 +68,7 @@
               </div>
               <br>
             <p>
-              <%= f.submit type: 'button', class: "btn btn-danger" %>
+              <%= f.submit type: 'submit', class: "btn btn-danger" %>
             </p>
          
         <% end %>

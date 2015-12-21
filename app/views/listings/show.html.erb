@@ -31,10 +31,21 @@
 				  <%= @listing.body %>
 				</p>
 
+				<div>
+					<%if @listing.nearbys(100).nil?%>
+					<%else%>
+					<h3>Nearby</h3>		
+
+						<% for listing in @listing.nearbys(100)%>
+						<%= link_to listing.name, listing %> (<%= listing.distance.round(2) %> km)
+						<%end%>
+					<%end%>
+				</div>
+
+
 	</div> 	<!-- col-md-8 -->
 
-
-		<div class="col-md-4">
+	<div class="col-md-4">
 		<h1>&nbsp</h1>
 			<div class="booking-red" id="scroll-with-me">
 			<h3><strong> <%= @listing.name%></strong></h3>
@@ -57,21 +68,13 @@
 
 			<%= link_to 'Edit', edit_listing_path(@listing) %>
 			</div>
-		</div> <!-- col-md-4 -->
+	</div> <!-- col-md-4 -->
 
-		<%if @listing.nearbys(100).nil?%>
-		<%else%>
-		<h3>Nearby</h3>		
-
-		<% for listing in @listing.nearbys(100)%>
-		<li><%= link_to listing.name, listing %> (<%= listing.distance.round(2) %> km)</div>
-		<%end%>
-		<%end%>
-</div>
 
 </div>
 
-	<div id="map"> </div>	
+</div>
+<div id="map"> </div>	
 
 
 
