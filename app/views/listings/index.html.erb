@@ -1,16 +1,19 @@
 <div class="container">
-
 <% if !@listings_near.nil?%>
-<h1>We found some results...</h1>
-	<%@listings_near.each do |list| %>
-		<ul>
-				<li><%= list.name %>
-				<%= link_to 'Show', listing_path(list) %> | <%= link_to 'Edit', edit_listing_path(list) %> | 
-				  <%= link_to 'Delete', listing_path(list),
-				      		method: :delete,
-				      		data: { confirm: "Are you sure?" } %></li>
-		</ul>
-		<%end%>
+	<% if !@listings_near.empty?%>
+	<h1>We found some results...</h1>
+		<%@listings_near.each do |list| %>
+			<ul>
+					<li><%= list.name %>
+					<%= link_to 'Show', listing_path(list) %> | <%= link_to 'Edit', edit_listing_path(list) %> | 
+					  <%= link_to 'Delete', listing_path(list),
+					      		method: :delete,
+					      		data: { confirm: "Are you sure?" } %></li>
+			</ul>
+			<%end%>
+		<% else %>
+		<h3> We did not find anything, sorry. Check all of our listings </h3>	
+	<%end%>		
 <%end%>
 
 

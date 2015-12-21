@@ -12,22 +12,22 @@ class BookingsController < ApplicationController
 	def create
 		@booking = current_user.bookings.new(bookings_params)
 		@booking.amount *= (@booking.check_out - @booking.check_in).to_i
-		@booking.save
-			# byebug
+		if @booking.valid?
+		# byebug
 			result = Braintree::Transaction.sale(
 	  		amount: @booking.amount.to_i,
 	  		payment_method_nonce: params[:payment_method_nonce])
 			# byebug
 			if result.success?
-				# ReservationJob.perform_later(@booking.user, @booking.listing, @booking)
-	      	redirect_to @booking, notice: "Congraulations! Your transaction has been successfully!"			
-			else
-				flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
-	    	client_token = generate_client_token
-	    	@listing = Listing.find(params[:listing_id])
-	    	byebug
-	      render :new
+				@booking.save
+				ReservationJob.perform_later(@booking.user, @booking.listing, @booking)
+      	redirect_to @booking, notice: "Congraulations! Your transaction has been successfully!" and return
 	  	end
+	  end
+	  flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
+	  client_token = generate_client_token
+  	@listing = Listing.find(params[:listing_id])
+	  render 'new'
 
 	end
 
