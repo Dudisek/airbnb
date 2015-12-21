@@ -13,36 +13,7 @@
 
 <%= form_for @listing do |f| %> 
 
-  <p>
-    <%= f.label :street_number %><br>
-    <%= f.text_field :address_street_number %>
-  </p>  
-
-  <p>
-    <%= f.label :street %><br>
-    <%= f.text_field :address_street %>
-  </p>  
-
-  <p>
-    <%= f.label :city %><br>
-    <%= f.text_field :address_city %>
-  </p>
-
-  <p>
-    <%= f.label :zip_code %><br>
-    <%= f.text_field :address_zip_code %>
-  </p>    
-
-  <p>
-    <%= f.label :state %><br>
-    <%= f.text_field :address_state %>
-  </p>    
-
-   <p>
-    <%= f.label :country %><br>
-    <%= f.text_field :address_country %>
-  </p>    
-
+  Address: 
     <div class="jt-address-autocomplete">
         <!-- This field is used to search the address on Google Maps -->
         <%= f.text_field :address, class: 'jt-address-search' %>
@@ -59,4 +30,4 @@
  
 <% end %>
  
-<%= link_to 'Back', listings_path %>
+<script async type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&callback=googleMapInitialize"></script>

@@ -17,6 +17,9 @@
 //= require i18n/datepicker.en
 //= require jt_address
 
+
+$('#calendar').data('datepicker') //= CALENDAR
+
 // This function is call when Google Maps is loaded
 window.googleMapInitialize = function(){
 
@@ -24,7 +27,7 @@ window.googleMapInitialize = function(){
     $('.jt-address-autocomplete').jt_address();
 };
 
-$('#my-element').data('datepicker')
+
 // // // #LISTING
 // $(window).scroll(function(){
 //   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );

@@ -48,10 +48,12 @@
 	<div class="col-md-4">
 		<h1>&nbsp</h1>
 			<div class="booking-red" id="scroll-with-me">
-			<h3><strong> <%= @listing.name%></strong></h3>
+				<div class="sidebar-listing">
+				<h3><strong> <%= @listing.name%></strong></h3>
+				</div>
 			<% @listing.tags.any? %>
 			<% @listing.tags.each do |tag| %>
-			<span class="label label-info tags"><%= tag %></span>
+			<span class="label label-warning tags"><%= tag %></span>
 			<% end %>
 			<br><br>
 			<p><strong>By:</strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%>

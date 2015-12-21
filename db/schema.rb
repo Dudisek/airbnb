@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 201512100104529) do
   create_table "listings", force: :cascade do |t|
     t.string   "name"
     t.text     "body"
-    t.date     "start"
-    t.date     "end"
+    t.string   "start"
+    t.string   "end"
     t.integer  "price"
     t.integer  "num_of_guest"
     t.string   "room_type"

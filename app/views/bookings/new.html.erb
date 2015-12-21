@@ -5,12 +5,12 @@
 
   <p>
     <%= f.label :check_in %><br>
-    <%= f.date_field :check_in %>
+    <%= f.date_field :check_in, id: "calendar", class: "datepicker-here", type: "text", placeholder: "Check-in", data: {language: 'en'}  %>
   </p>
     <%= f.hidden_field :listing_id, value: @listing.id %>
   <p>
     <%= f.label :check_out %><br>
-    <%= f.date_field :check_out %>
+    <%= f.date_field :check_out, id: "calendar", class: "datepicker-here", type: "text", placeholder: "Check-out", data: {language: 'en'}  %>
   </p> 
   <%= f.hidden_field :amount, value: @listing.price %>
   <p>

@@ -47,7 +47,7 @@
   .datepicker--cell.-focus- {
     background: #f0f0f0; }
   .datepicker--cell.-current- {
-    color: #4EB5E6; }
+    color: #f14444; }
     .datepicker--cell.-current-.-focus- {
       color: #4a4a4a; }
     .datepicker--cell.-current-.-in-range- {
@@ -82,12 +82,12 @@
   .datepicker--cell.-selected- {
     color: #fff;
     border: none;
-    background: #5cc4ef; }
+    background: #f14444; }
     .datepicker--cell.-selected-.-current- {
       color: #fff;
-      background: #5cc4ef; }
+      background: #e84345; }
     .datepicker--cell.-selected-.-focus- {
-      background: #45bced; }
+      background: #f14444; }
 
 .datepicker--days-names {
   display: -webkit-flex;

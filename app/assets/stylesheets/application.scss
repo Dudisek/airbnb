@@ -5,6 +5,7 @@
  *= require footer
  *= require login
  *= require slider
+ *= require booking_box
 */
 
 
@@ -22,12 +23,7 @@
   height: 45px;
 }
 
-.booking-red {
-  padding: 20px;
-  box-shadow: 0px 0px 0px 2px #d75452;
-  border-radius: 10px;
 
-}
 
 
 
