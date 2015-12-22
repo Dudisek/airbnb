@@ -13,11 +13,13 @@ class User < ActiveRecord::Base
 
   # VALIDATION
 
+  validates :email, presence: true, format: { with: /\w@\w{1}+[.]\w{2}/}, :uniqueness => true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :email, presence: true
-  validates :birthday, presence: true
-  validates :phone, presence: true
+  validates_format_of :phone, :with =>  /\d[0-9]\)*\z/ , :message => "Only positive number without spaces are allowed"
+  validates_inclusion_of :birthday,
+    :in => Date.new(1900)..Time.now.years_ago(15).to_date,
+    :message => 'Too young, dude!'
 
   # METHODS
   

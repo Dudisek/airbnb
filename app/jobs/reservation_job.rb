@@ -3,7 +3,6 @@ class ReservationJob < ActiveJob::Base
 	queue_as :default
 
 	def perform(args = {})
-		byebug
 		@header = args[:header]
 		@customer = args[:customer]
 		@listing = args[:listing]
@@ -16,7 +15,6 @@ class ReservationJob < ActiveJob::Base
 		ReservationMailer.booking_email(@customer, @listing, @booking).deliver_now
 
 		elsif @header == "message"
-			byebug
 		ReservationMailer.message_email(@sender, @subject, @message, @listing).deliver_now
 		end
 	end
