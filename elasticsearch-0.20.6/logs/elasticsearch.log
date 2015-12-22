@@ -23,3 +23,119 @@
 [2015-12-22 01:19:51,965][INFO ][node                     ] [Venom] {0.20.6}[39408]: stopped
 [2015-12-22 01:19:51,965][INFO ][node                     ] [Venom] {0.20.6}[39408]: closing ...
 [2015-12-22 01:19:51,970][INFO ][node                     ] [Venom] {0.20.6}[39408]: closed
+[2015-12-22 09:41:05,453][INFO ][node                     ] [Jack-in-the-Box] {0.20.6}[39395]: stopping ...
+[2015-12-22 09:41:05,495][INFO ][node                     ] [Jack-in-the-Box] {0.20.6}[39395]: stopped
+[2015-12-22 09:41:05,495][INFO ][node                     ] [Jack-in-the-Box] {0.20.6}[39395]: closing ...
+[2015-12-22 09:41:05,502][INFO ][node                     ] [Jack-in-the-Box] {0.20.6}[39395]: closed
+[2015-12-22 09:41:30,274][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: initializing ...
+[2015-12-22 09:41:30,278][INFO ][plugins                  ] [Evilhawk‎] loaded [], sites []
+[2015-12-22 09:41:32,696][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: initialized
+[2015-12-22 09:41:32,697][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: starting ...
+[2015-12-22 09:41:32,845][INFO ][transport                ] [Evilhawk‎] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-22 09:41:35,892][INFO ][cluster.service          ] [Evilhawk‎] new_master [Evilhawk‎][--k9kTGMTNqFzIDDFYA78A][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-22 09:41:35,974][INFO ][discovery                ] [Evilhawk‎] elasticsearch/--k9kTGMTNqFzIDDFYA78A
+[2015-12-22 09:41:35,989][INFO ][http                     ] [Evilhawk‎] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-22 09:41:35,990][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: started
+[2015-12-22 09:41:36,410][INFO ][gateway                  ] [Evilhawk‎] recovered [1] indices into cluster_state
+[2015-12-22 09:42:12,622][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: stopping ...
+[2015-12-22 09:42:12,667][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: stopped
+[2015-12-22 09:42:12,668][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: closing ...
+[2015-12-22 09:42:12,673][INFO ][node                     ] [Evilhawk‎] {0.20.6}[42340]: closed
+[2015-12-22 09:42:30,708][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: initializing ...
+[2015-12-22 09:42:30,723][INFO ][plugins                  ] [Prime Mover] loaded [], sites []
+[2015-12-22 09:42:32,556][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: initialized
+[2015-12-22 09:42:32,557][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: starting ...
+[2015-12-22 09:42:32,655][INFO ][transport                ] [Prime Mover] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-22 09:42:35,698][INFO ][cluster.service          ] [Prime Mover] new_master [Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-22 09:42:35,773][INFO ][discovery                ] [Prime Mover] elasticsearch/iZVy0ay4QfW06RX0QWqmTw
+[2015-12-22 09:42:35,786][INFO ][http                     ] [Prime Mover] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-22 09:42:35,786][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: started
+[2015-12-22 09:42:36,240][INFO ][gateway                  ] [Prime Mover] recovered [1] indices into cluster_state
+[2015-12-22 12:18:43,934][DEBUG][action.index             ] [Prime Mover] [listings][2], node[iZVy0ay4QfW06RX0QWqmTw], [P], s[STARTED]: Failed to execute [index {[listings][listing][20], source[{"name":"Cyberia Smart House","body":"Cyberia follows the lives and translates the experiences of the first few people who realized that our culture was about to take a leap into the unknown. Some of them have succeeded beyond their wildest expectations and are now practically household names. Others have met with catastrophe. Still others have simply faded from view, their own contributions to the cyberian renaissance already completed.\r\n\r\nThe people in this book, and thousands of others like them around the world, understand the implications of our technologies on our culture, thought systems, spiritual beliefs, and even our biological evolution. They still stand as the most optimistic and forward-thinking appraisers of our civilization’s fate. As we draw ever nearer to the consensually hallucinatory reality for which these cyberians drew the blueprints, their impressions of life on the edge become even more relevant for the rest of us. And they make more sense.","start":"12/17/15","end":"12/23/15","price":2131,"num_of_guest":5,"room_type":"Entire home","picture":[{"url":"/uploads/tmp/1450757919-40637-4874/2.jpg","thumb":{"url":"/uploads/tmp/1450757919-40637-4874/thumb_2.jpg"},"main":{"url":"/uploads/tmp/1450757919-40637-4874/main_2.jpg"}},{"url":"/uploads/tmp/1450757919-40637-3652/Cyberia_SmartHomes__12__small.JPG","thumb":{"url":"/uploads/tmp/1450757919-40637-3652/thumb_Cyberia_SmartHomes__12__small.JPG"},"main":{"url":"/uploads/tmp/1450757919-40637-3652/main_Cyberia_SmartHomes__12__small.JPG"}}],"address_formatted_address":"","address_street_number":"","address_street_name":"","address_street":"","address_city":"","address_zip_code":"","address_department":"","address_department_code":"","address_state":"","address_state_code":"","address_country":"","address_country_code":"","address_lat":null,"address_lng":null,"user_id":3,"created_at":"2015-12-22T04:18:43.786Z","updated_at":"2015-12-22T04:18:43.786Z"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: Failed to parse [start]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:320)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:587)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:486)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:430)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:318)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:532)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:430)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.mapper.MapperParsingException: failed to parse date field [12/17/15], tried both date format [dateOptionalTime], and timestamp number
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:432)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:361)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:182)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:307)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: Invalid format: "12/17/15" is malformed at "/17/15"
+	at org.elasticsearch.common.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:747)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:426)
+	... 14 more
+[2015-12-22 12:18:51,508][DEBUG][action.index             ] [Prime Mover] [listings][3], node[iZVy0ay4QfW06RX0QWqmTw], [P], s[STARTED]: Failed to execute [index {[listings][listing][21], source[{"name":"Cyberia Smart House","body":"Cyberia follows the lives and translates the experiences of the first few people who realized that our culture was about to take a leap into the unknown. Some of them have succeeded beyond their wildest expectations and are now practically household names. Others have met with catastrophe. Still others have simply faded from view, their own contributions to the cyberian renaissance already completed.\r\n\r\nThe people in this book, and thousands of others like them around the world, understand the implications of our technologies on our culture, thought systems, spiritual beliefs, and even our biological evolution. They still stand as the most optimistic and forward-thinking appraisers of our civilization’s fate. As we draw ever nearer to the consensually hallucinatory reality for which these cyberians drew the blueprints, their impressions of life on the edge become even more relevant for the rest of us. And they make more sense.","start":"12/17/15","end":"12/23/15","price":2131,"num_of_guest":5,"room_type":"Entire home","picture":[{"url":"/uploads/tmp/1450757930-40637-0358/2.jpg","thumb":{"url":"/uploads/tmp/1450757930-40637-0358/thumb_2.jpg"},"main":{"url":"/uploads/tmp/1450757930-40637-0358/main_2.jpg"}},{"url":"/uploads/tmp/1450757930-40637-8362/Cyberia_SmartHomes__12__small.JPG","thumb":{"url":"/uploads/tmp/1450757930-40637-8362/thumb_Cyberia_SmartHomes__12__small.JPG"},"main":{"url":"/uploads/tmp/1450757930-40637-8362/main_Cyberia_SmartHomes__12__small.JPG"}}],"address_formatted_address":"Cyber 8, 63000 Cyberjaya, Selangor, Malaysia","address_street_number":"","address_street_name":"","address_street":"","address_city":"Cyberjaya","address_zip_code":"63000","address_department":"","address_department_code":"","address_state":"Selangor","address_state_code":"Selangor","address_country":"Malaysia","address_country_code":"MY","address_lat":2.910878,"address_lng":101.6561711,"user_id":3,"created_at":"2015-12-22T04:18:51.430Z","updated_at":"2015-12-22T04:18:51.430Z"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: Failed to parse [start]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:320)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:587)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:486)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:430)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:318)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:532)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:430)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.mapper.MapperParsingException: failed to parse date field [12/17/15], tried both date format [dateOptionalTime], and timestamp number
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:432)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:361)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:182)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:307)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: Invalid format: "12/17/15" is malformed at "/17/15"
+	at org.elasticsearch.common.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:747)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:426)
+	... 14 more
+[2015-12-22 12:23:14,625][DEBUG][action.index             ] [Prime Mover] [listings][4], node[iZVy0ay4QfW06RX0QWqmTw], [P], s[STARTED]: Failed to execute [index {[listings][listing][22], source[{"name":"Cyberia","body":"adsda","start":"12/03/15","end":"12/23/15","price":null,"num_of_guest":7,"room_type":"Entire home","picture":[{"url":"/uploads/tmp/1450758190-40637-6877/2.jpg","thumb":{"url":"/uploads/tmp/1450758190-40637-6877/thumb_2.jpg"},"main":{"url":"/uploads/tmp/1450758190-40637-6877/main_2.jpg"}},{"url":"/uploads/tmp/1450758190-40637-0617/Cyberia_SmartHomes__12__small.JPG","thumb":{"url":"/uploads/tmp/1450758190-40637-0617/thumb_Cyberia_SmartHomes__12__small.JPG"},"main":{"url":"/uploads/tmp/1450758190-40637-0617/main_Cyberia_SmartHomes__12__small.JPG"}}],"address_formatted_address":null,"address_street_number":null,"address_street_name":null,"address_street":null,"address_city":null,"address_zip_code":null,"address_department":null,"address_department_code":null,"address_state":null,"address_state_code":null,"address_country":null,"address_country_code":null,"address_lat":null,"address_lng":null,"user_id":3,"created_at":"2015-12-22T04:23:14.421Z","updated_at":"2015-12-22T04:23:14.421Z"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: Failed to parse [start]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:320)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:587)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:486)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:430)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:318)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:532)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:430)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.mapper.MapperParsingException: failed to parse date field [12/03/15], tried both date format [dateOptionalTime], and timestamp number
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:432)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:361)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:182)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:307)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: Invalid format: "12/03/15" is malformed at "/03/15"
+	at org.elasticsearch.common.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:747)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:426)
+	... 14 more
+[2015-12-22 17:17:17,442][INFO ][node                     ] [Enforcer] {0.20.6}[58916]: initializing ...
+[2015-12-22 17:17:17,447][INFO ][plugins                  ] [Enforcer] loaded [], sites []
+[2015-12-22 17:17:19,165][INFO ][node                     ] [Enforcer] {0.20.6}[58916]: initialized
+[2015-12-22 17:17:19,165][INFO ][node                     ] [Enforcer] {0.20.6}[58916]: starting ...
+[2015-12-22 17:17:19,245][INFO ][transport                ] [Enforcer] bound_address {inet[/0:0:0:0:0:0:0:0:9301]}, publish_address {inet[/192.168.20.15:9301]}
+[2015-12-22 17:17:22,322][INFO ][cluster.service          ] [Prime Mover] added {[Enforcer][u1kdcT1TTi2lwRKsI-haAg][inet[/192.168.20.15:9301]],}, reason: zen-disco-receive(join from node[[Enforcer][u1kdcT1TTi2lwRKsI-haAg][inet[/192.168.20.15:9301]]])
+[2015-12-22 17:17:22,340][INFO ][cluster.service          ] [Enforcer] detected_master [Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]], added {[Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]],}, reason: zen-disco-receive(from master [[Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]]])
+[2015-12-22 17:17:22,359][INFO ][discovery                ] [Enforcer] elasticsearch/u1kdcT1TTi2lwRKsI-haAg
+[2015-12-22 17:17:22,366][INFO ][http                     ] [Enforcer] bound_address {inet[/0:0:0:0:0:0:0:0:9201]}, publish_address {inet[/192.168.20.15:9201]}
+[2015-12-22 17:17:22,366][INFO ][node                     ] [Enforcer] {0.20.6}[58916]: started
+[2015-12-22 17:17:22,984][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: stopping ...
+[2015-12-22 17:17:23,032][INFO ][discovery.zen            ] [Enforcer] master_left [[Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]]], reason [shut_down]
+[2015-12-22 17:17:23,034][INFO ][cluster.service          ] [Enforcer] master {new [Enforcer][u1kdcT1TTi2lwRKsI-haAg][inet[/192.168.20.15:9301]], previous [Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]]}, removed {[Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]],}, reason: zen-disco-master_failed ([Prime Mover][iZVy0ay4QfW06RX0QWqmTw][inet[/192.168.20.15:9300]])
+[2015-12-22 17:17:23,077][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: stopped
+[2015-12-22 17:17:23,077][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: closing ...
+[2015-12-22 17:17:23,089][INFO ][node                     ] [Prime Mover] {0.20.6}[42419]: closed

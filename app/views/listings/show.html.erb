@@ -2,51 +2,95 @@
 <div class="container">
 <div class="row">
 
-	
-	<div class="col-md-8">
-
-
 		<h1><%=@listing.name%>, <small><%=@listing.address_city%>, <%=@listing.address_state%></small></h1>
-
+	<div class="col-md-8">
 		<%= image_tag @listing.picture[0].main.url, class: "img-responsive" if @listing.picture? %>
 
 		<br><br>
 
-
-
+  
 		<% @listing.picture.each do |pic| %>
-			<img src="<%=pic.thumb.url%>" />
+		    <img  src="<%=pic.thumb.url%>">
 		<%end%>
 
-				<p class="glyphicon glyphicon-home">
-				  <strong>Room type:</strong>
-				  <%= @listing.room_type %>
+
+	<div class="row">
+		<div class="col-md-6">
+		<br>
+		<h3> Basic information</h3>
+		<hr>
+				<p>
+				  <strong>Room type:</strong> <%= @listing.room_type %>
 				</p>
-				<p class="glyphicon glyphicon-user">
+				<hr>
+				<p>
 				  <strong>Number of guests:</strong>
 				  <%= @listing.num_of_guest %>
 				</p>
-				<p class="glyphicon glyphicon-pencil">
-				  <strong>Description:</strong>
-				  <%= @listing.body %>
+				<hr>
+				<p>
+					<strong>Tags: </strong><% @listing.tags.each do |tag| %>
+				<%= tag %>
+				<% end %>
 				</p>
 
+		</div>
+		<div class="col-md-6">
+			<br>
+				<h3>Location</h3>
+				<hr>
+				<p>
+				<strong>Street:</strong> <%= @listing.address_street || @listing.address_street.present?%> 
+				</p>
+				<hr>
+				<p>
+				<strong>City: </strong>
+				<%=@listing.address_city || @listing.address_city.present? %>
+				</p>
+				<hr>
+				<p>
+				<strong>State: </strong>
+				<%=@listing.address_state || @listing.address_state.present?%>
+				</p>
+
+		</div>
+	</div>
+	<hr>
+					<p>
+				<strong>Avaibility:</strong><br>
+				
+				 From: <%=@listing.start %> To: <%=@listing.end %> 
+				 </p>
+				 <hr>
+				<p><strong>Description:</strong><br></p>
+				<p><%= @listing.body %></p>
+				<hr>
+
+				<h3>User information</h3>
+				<br>
+					<div class="pull-left text-center">
+						<img class="img-circle img-responsive" src="<%=@listing.user.picture.thumb.url%>">
+
+
+					</div>
 				<div>
-					<%if @listing.nearbys(100).nil?%>
-					<%else%>
-					<h3>Nearby</h3>		
-
-						<% for listing in @listing.nearbys(100)%>
-						<%= link_to listing.name, listing %> (<%= listing.distance.round(2) %> km)
-						<%end%>
-					<%end%>
+					<p class="pull-right">
+						<button type="button" class="btn btn-warning glyphicon glyphicon-envelope" data-toggle="modal" data-target="#message" data-whatever="<%=@listing.user.last_name%>"></button>
+					</p>
+					<p class="pull-left">
+						<h4 class="glyphicon glyphicon-user"></strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%></h4>
+					</p>
+					
+					<p>
+					<strong>About:</strong> <%=@listing.user.about%>
+					</p>
 				</div>
-
+				
+				<div class="clearfix"></div>
 
 	</div> 	<!-- col-md-8 -->
 
 	<div class="col-md-4">
-		<h1>&nbsp</h1>
 			<div class="booking-red" id="scroll-with-me">
 				<div class="sidebar-listing">
 				<h3><strong> <%= @listing.name%></strong></h3>
@@ -75,7 +119,22 @@
 
 </div>
 
+
+				<div>
+					<%if @listing.nearbys(100).nil?%>
+					<%else%>
+					<h3>Nearby places</h3>	
+					<br>
+
+						<% for listing in @listing.nearbys(100)%>
+						<%= link_to image_tag("#{listing.picture[0].thumb}", class: "img-thumbnail") , listing %>  (<%= listing.distance.round(2) %> km away)
+						<%end%>
+					<%end%>
+				</div>
 </div>
+<br><br>
+
+<%= render 'listings/message' %>
 <div id="map"> </div>	
 
 

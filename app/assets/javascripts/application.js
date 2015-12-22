@@ -20,6 +20,10 @@
 
 $('#calendar').data('datepicker') //= CALENDAR
 
+
+
+
+
 // This function is call when Google Maps is loaded
 window.googleMapInitialize = function(){
 
@@ -28,9 +32,13 @@ window.googleMapInitialize = function(){
 };
 
 
-// // // #LISTING
+// #LISTING
 // $(window).scroll(function(){
-//   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
+//   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()), "marginLeft":($(window).scrollLeft())}, "slow");
+// });
+
+// $(document).ready(function() {
+//     $('#scroll-with-me').animate(scrollToFixed({ marginTop: 250 }));
 // });
 
 // # MAP
@@ -42,11 +50,21 @@ function initMap() {
   });
 }
 
+$('#message').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+
 
 // # LISTING BOOKING SCROLLING DIFFERENT SOLUTION
 // $(document).ready(function() {
 //   $('#scroll-with-me').scrollToFixed();
-//   $('#footer').scrollToFixed( { bottom: 0, limit: $('#footer').offset().top } );  
+//   $('#map').scrollToFixed( { marginottom: 250, limit: $('').offset().top } );  
 // });
 
 

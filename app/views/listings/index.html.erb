@@ -3,14 +3,13 @@
 <% if !@listings_near.nil?%>
 	<% if !@listings_near.empty?%>
 	<h2>We found <%=@listings_near.size%> results...</h2>
-		<%@listings_near.each do |list| %>
-			<ul>
-			<div class="row">
-					<div class="col-lg-2 col-sm-3 col-xs-4"><img src="<%= list.picture[0] %>" class="thumbnail img-responsive"/>
-					</div>
-					</div>
-			</ul>
+		<div class="row">
+		<ul>
+			<%@listings_near.each do |list| %>
+					<a href="/listings/<%=list.id%>"<div class="col-lg-2 col-sm-3 col-xs-4"><img src="<%=list.picture[0].url%>" class="thumbnail img-responsive"/></a></br>
 			<%end%>
+		</ul>
+		</div>
 		<% else %>
 		<h3> We did not find anything, sorry. Check all of our listings </h3>	
 	<%end%>		
@@ -23,7 +22,6 @@
     <div class="col-lg-2 col-sm-3 col-xs-4">
         <a href='/listings/<%=list.id%>'>
              <img src="<%=list.picture[0]%>" class="thumbnail img-responsive">
-         <h2>A Movie in the Park:<br />Kung Fu Panda</h2>
         </a>
     </div>
 

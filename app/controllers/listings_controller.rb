@@ -30,7 +30,6 @@ class ListingsController < ApplicationController
 	
 	def show
 		@listing = Listing.find(params[:id])
-		# @map = JT::Rails::Address.search("#{@listing.address_formatted_address}", "AIzaSyAPnzCJnV5tUuOi2l_s6oSJMGM5H_UR5-c")
 		@user = User.find(@listing.user_id)
 	end
 
@@ -56,6 +55,15 @@ class ListingsController < ApplicationController
 	  else 
 	    @listings = List.postall
 	  end
+	end
+
+	def send_email
+		@listing = Listing.find(params[:listing])
+		@subject = params[:subject]
+		@message = params[:message]
+		@sender = User.find(params[:sender])
+		ReservationJob.perform_later({subject: @subject, message: @message, sender: @sender, listing: @listing, header: "message"})
+		redirect_to listings_path(@listing)
 	end
 
 private     

@@ -7,12 +7,17 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
   <!-- MAP GOOGLE -->
   <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP']%>  
 &callback=initMap" async defer></script>
   <meta name="viewport" content="initial-scale=1.0">
   <meta charset="utf-8">
+  <!-- for JT search -->
+  <script async type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&callback=googleMapInitialize"></script>
   <!-- END MAP GOOGLE -->
+
 </head>
 <body>
 
@@ -21,6 +26,7 @@
 
 
 <br><br><br>
+
 
 
   <!-- Nav tabs -->

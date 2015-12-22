@@ -13,14 +13,12 @@ class BookingsController < ApplicationController
 		@booking = current_user.bookings.new(bookings_params)
 		@booking.amount *= (@booking.check_out - @booking.check_in).to_i
 		if @booking.valid?
-		# byebug
 			result = Braintree::Transaction.sale(
 	  		amount: @booking.amount.to_i,
 	  		payment_method_nonce: params[:payment_method_nonce])
-			# byebug
 			if result.success?
 				@booking.save
-				# ReservationJob.perform_later(@booking.user, @booking.listing, @booking)
+				ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
       	redirect_to @booking, notice: "Congraulations! Your transaction has been successfully!" and return
 	  	end
 	  end
