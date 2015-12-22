@@ -33,9 +33,9 @@ window.googleMapInitialize = function(){
 
 
 // #LISTING
-// $(window).scroll(function(){
-//   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()), "marginLeft":($(window).scrollLeft())}, "slow");
-// });
+$(window).scroll(function(){
+  $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()), "marginLeft":($(window).scrollLeft())}, "slow");
+});
 
 // $(document).ready(function() {
 //     $('#scroll-with-me').animate(scrollToFixed({ marginTop: 250 }));

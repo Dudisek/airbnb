@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+
+# Pagination
+gem 'will_paginate'
+
 # Search
 gem 'elasticsearch-model',
   git: 'git://github.com/elasticsearch/elasticsearch-rails.git'

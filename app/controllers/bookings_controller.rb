@@ -11,7 +11,8 @@ class BookingsController < ApplicationController
 
 	def create
 		@booking = current_user.bookings.new(bookings_params)
-		@booking.amount *= (@booking.check_out - @booking.check_in).to_i
+		byebug
+		@booking.amount *= (@booking.check_out.to_date - @booking.check_in.to_date).to_i
 		if @booking.valid?
 			result = Braintree::Transaction.sale(
 	  		amount: @booking.amount.to_i,
@@ -49,7 +50,6 @@ class BookingsController < ApplicationController
 	 
 	  redirect_to '/'
 	end
-
 
 
 private

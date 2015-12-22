@@ -17,6 +17,7 @@
 
 
 <h2>All listings</h2>
+
 		<% @listings.each do |list| %>
 
     <div class="col-lg-2 col-sm-3 col-xs-4">
@@ -24,6 +25,10 @@
              <img src="<%=list.picture[0]%>" class="thumbnail img-responsive">
         </a>
     </div>
-
 		<%end%>
+		<div class="clearfix"></div>
+		<br>
+		<center>
+		<%= will_paginate @listings %>
+		</center>
 </div>

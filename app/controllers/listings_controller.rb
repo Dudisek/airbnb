@@ -18,8 +18,8 @@ class ListingsController < ApplicationController
 	end
 
 	def create
-		byebug
 		@listing = current_user.listings.new(listing_params)
+		byebug
 		if @listing.save
   			redirect_to @listing
   		else
@@ -37,9 +37,9 @@ class ListingsController < ApplicationController
 		if params[:search].present?
 			# @listings_near = Listing.search(params[:search])
 			@listings_near = Listing.near(params[:search], 50, order: "distance") 
-			@listings = Listing.all
+			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
 		else
-			@listings = Listing.all
+			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
 		end
 	end
 
