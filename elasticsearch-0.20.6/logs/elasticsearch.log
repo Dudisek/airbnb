@@ -6693,3 +6693,7 @@ Caused by: java.net.ConnectException: Connection refused
 [2015-12-23 15:17:34,126][INFO ][http                     ] [Rasputin, Piotr] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
 [2015-12-23 15:17:34,126][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: started
 [2015-12-23 15:17:34,946][INFO ][gateway                  ] [Rasputin, Piotr] recovered [1] indices into cluster_state
+[2015-12-23 15:20:44,616][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: stopping ...
+[2015-12-23 15:20:44,693][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: stopped
+[2015-12-23 15:20:44,693][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: closing ...
+[2015-12-23 15:20:44,700][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: closed
