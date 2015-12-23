@@ -18,7 +18,7 @@ var Datepicker;
             startDate: new Date(),
             firstDay: '',
             weekends: [6, 0],
-            dateFormat: '',
+            dateFormat: 'dd/mm/yyyy',
             altField: '',
             altFieldDateFormat: '@',
             toggleSelected: true,

@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 201512100104529) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.date     "check_in"
-    t.date     "check_out"
+    t.string   "check_in"
+    t.string   "check_out"
     t.integer  "guests"
     t.integer  "user_id"
     t.integer  "listing_id"
