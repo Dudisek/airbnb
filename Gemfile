@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Heroku web puma
+gem 'puma'
+# Production heroku
+gem 'rails_12factor'
 # PROC server production
 gem 'foreman'
 # Gon for js

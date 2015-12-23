@@ -6264,3 +6264,432 @@ Caused by: java.net.ConnectException: Connection refused
 	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
 	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
 	... 3 more
+[2015-12-23 14:30:26,196][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:31:26,263][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:32:26,309][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:33:26,367][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:34:26,423][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:35:26,479][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:36:26,659][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:37:26,717][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:38:26,768][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:39:26,817][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:40:26,868][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:41:26,924][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:42:26,981][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:43:27,051][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:44:27,115][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:45:27,174][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:46:27,225][WARN ][cluster.service          ] [Morlun] failed to reconnect to node [Morlun][mkKxGi60RhSlvSz7m3h_1Q][inet[/192.168.1.4:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Morlun][inet[/192.168.1.4:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:148)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:104)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:78)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-23 14:47:07,997][INFO ][node                     ] [Morlun] {0.20.6}[66339]: stopping ...
+[2015-12-23 14:47:08,049][INFO ][node                     ] [Morlun] {0.20.6}[66339]: stopped
+[2015-12-23 14:47:08,049][INFO ][node                     ] [Morlun] {0.20.6}[66339]: closing ...
+[2015-12-23 14:47:08,059][INFO ][node                     ] [Morlun] {0.20.6}[66339]: closed
+[2015-12-23 14:47:17,571][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: initializing ...
+[2015-12-23 14:47:17,578][INFO ][plugins                  ] [Dredmund Druid] loaded [], sites []
+[2015-12-23 14:47:19,706][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: initialized
+[2015-12-23 14:47:19,707][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: starting ...
+[2015-12-23 14:47:19,855][INFO ][transport                ] [Dredmund Druid] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-23 14:47:22,914][INFO ][cluster.service          ] [Dredmund Druid] new_master [Dredmund Druid][SKItq_8_Tyi62uTfbJKMXw][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-23 14:47:23,018][INFO ][discovery                ] [Dredmund Druid] elasticsearch/SKItq_8_Tyi62uTfbJKMXw
+[2015-12-23 14:47:23,033][INFO ][http                     ] [Dredmund Druid] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-23 14:47:23,034][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: started
+[2015-12-23 14:47:23,493][INFO ][gateway                  ] [Dredmund Druid] recovered [1] indices into cluster_state
+[2015-12-23 14:47:39,868][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: stopping ...
+[2015-12-23 14:47:39,927][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: stopped
+[2015-12-23 14:47:39,927][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: closing ...
+[2015-12-23 14:47:39,934][INFO ][node                     ] [Dredmund Druid] {0.20.6}[77657]: closed
+[2015-12-23 14:48:08,505][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: initializing ...
+[2015-12-23 14:48:08,511][INFO ][plugins                  ] [Zzzax] loaded [], sites []
+[2015-12-23 14:48:10,645][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: initialized
+[2015-12-23 14:48:10,646][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: starting ...
+[2015-12-23 14:48:10,758][INFO ][transport                ] [Zzzax] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-23 14:48:13,807][INFO ][cluster.service          ] [Zzzax] new_master [Zzzax][lrWQtP9oRwOIDdkFweNAWg][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-23 14:48:13,891][INFO ][discovery                ] [Zzzax] elasticsearch/lrWQtP9oRwOIDdkFweNAWg
+[2015-12-23 14:48:13,904][INFO ][http                     ] [Zzzax] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-23 14:48:13,904][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: started
+[2015-12-23 14:48:14,322][INFO ][gateway                  ] [Zzzax] recovered [1] indices into cluster_state
+[2015-12-23 14:51:50,451][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: stopping ...
+[2015-12-23 14:51:50,506][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: stopped
+[2015-12-23 14:51:50,506][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: closing ...
+[2015-12-23 14:51:50,513][INFO ][node                     ] [Zzzax] {0.20.6}[77734]: closed
+[2015-12-23 15:03:10,417][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: initializing ...
+[2015-12-23 15:03:10,424][INFO ][plugins                  ] [Squidboy] loaded [], sites []
+[2015-12-23 15:03:13,123][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: initialized
+[2015-12-23 15:03:13,124][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: starting ...
+[2015-12-23 15:03:13,310][INFO ][transport                ] [Squidboy] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-23 15:03:16,388][INFO ][cluster.service          ] [Squidboy] new_master [Squidboy][-yXlOnxQTpm0XAyTe1FVvw][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-23 15:03:16,506][INFO ][discovery                ] [Squidboy] elasticsearch/-yXlOnxQTpm0XAyTe1FVvw
+[2015-12-23 15:03:16,523][INFO ][http                     ] [Squidboy] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-23 15:03:16,523][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: started
+[2015-12-23 15:03:17,085][INFO ][gateway                  ] [Squidboy] recovered [1] indices into cluster_state
+[2015-12-23 15:16:02,068][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: stopping ...
+[2015-12-23 15:16:02,122][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: stopped
+[2015-12-23 15:16:02,122][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: closing ...
+[2015-12-23 15:16:02,131][INFO ][node                     ] [Squidboy] {0.20.6}[78056]: closed
+[2015-12-23 15:16:48,148][INFO ][node                     ] [Grotesk] {0.20.6}[78431]: initializing ...
+[2015-12-23 15:16:48,154][INFO ][plugins                  ] [Grotesk] loaded [], sites []
+[2015-12-23 15:17:04,529][INFO ][node                     ] [Uatu] {0.20.6}[78490]: initializing ...
+[2015-12-23 15:17:04,538][INFO ][plugins                  ] [Uatu] loaded [], sites []
+[2015-12-23 15:17:06,963][INFO ][node                     ] [Uatu] {0.20.6}[78490]: initialized
+[2015-12-23 15:17:06,964][INFO ][node                     ] [Uatu] {0.20.6}[78490]: starting ...
+[2015-12-23 15:17:07,098][INFO ][transport                ] [Uatu] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-23 15:17:10,159][INFO ][cluster.service          ] [Uatu] new_master [Uatu][6zqEbAJpSY6ApsIRA6NjbA][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-23 15:17:10,279][INFO ][discovery                ] [Uatu] elasticsearch/6zqEbAJpSY6ApsIRA6NjbA
+[2015-12-23 15:17:10,294][INFO ][http                     ] [Uatu] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-23 15:17:10,294][INFO ][node                     ] [Uatu] {0.20.6}[78490]: started
+[2015-12-23 15:17:10,932][INFO ][gateway                  ] [Uatu] recovered [1] indices into cluster_state
+[2015-12-23 15:17:19,303][INFO ][node                     ] [Uatu] {0.20.6}[78490]: stopping ...
+[2015-12-23 15:17:19,393][INFO ][node                     ] [Uatu] {0.20.6}[78490]: stopped
+[2015-12-23 15:17:19,393][INFO ][node                     ] [Uatu] {0.20.6}[78490]: closing ...
+[2015-12-23 15:17:19,399][INFO ][node                     ] [Uatu] {0.20.6}[78490]: closed
+[2015-12-23 15:17:28,290][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: initializing ...
+[2015-12-23 15:17:28,313][INFO ][plugins                  ] [Rasputin, Piotr] loaded [], sites []
+[2015-12-23 15:17:30,821][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: initialized
+[2015-12-23 15:17:30,821][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: starting ...
+[2015-12-23 15:17:30,953][INFO ][transport                ] [Rasputin, Piotr] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.15:9300]}
+[2015-12-23 15:17:34,008][INFO ][cluster.service          ] [Rasputin, Piotr] new_master [Rasputin, Piotr][HesOLmx7QKaVJz6ziQN1Xg][inet[/192.168.20.15:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-23 15:17:34,111][INFO ][discovery                ] [Rasputin, Piotr] elasticsearch/HesOLmx7QKaVJz6ziQN1Xg
+[2015-12-23 15:17:34,126][INFO ][http                     ] [Rasputin, Piotr] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.15:9200]}
+[2015-12-23 15:17:34,126][INFO ][node                     ] [Rasputin, Piotr] {0.20.6}[78549]: started
+[2015-12-23 15:17:34,946][INFO ][gateway                  ] [Rasputin, Piotr] recovered [1] indices into cluster_state

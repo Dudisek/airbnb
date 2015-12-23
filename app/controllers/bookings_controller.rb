@@ -17,8 +17,7 @@ class BookingsController < ApplicationController
 	  		payment_method_nonce: params[:payment_method_nonce])
 			if result.success?
 				@booking.save
-				# EMAIL
-				# ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
+				ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
       	redirect_to @booking, notice: "Congraulations! Your transaction has been successfully!" and return
 	  	end
 	  end
