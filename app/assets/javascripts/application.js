@@ -33,9 +33,9 @@ window.googleMapInitialize = function(){
 
 
 // #LISTING
-$(window).scroll(function(){
-  $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()), "marginLeft":($(window).scrollLeft())}, "slow");
-});
+// $(window).scroll(function(){
+//   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()), "marginLeft":($(window).scrollLeft())}, "slow");
+// });
 
 // $(document).ready(function() {
 //     $('#scroll-with-me').animate(scrollToFixed({ marginTop: 250 }));
@@ -45,7 +45,7 @@ $(window).scroll(function(){
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 49.6929469, lng: 18.34807390000003},
+    center: {lat: gon.lat, lng: gon.lng},
     zoom: 15
   });
 }

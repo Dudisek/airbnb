@@ -1,7 +1,7 @@
 
 <div class="container">
 <div class="row">
-
+<%= include_gon %>
 		<h1><%=@listing.name%>, <small><%=@listing.address_city%>, <%=@listing.address_state%></small></h1>
 	<div class="col-md-8">
 		<%= image_tag @listing.picture[0].main.url, class: "img-responsive" if @listing.picture? %>

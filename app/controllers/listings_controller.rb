@@ -30,6 +30,8 @@ class ListingsController < ApplicationController
 	
 	def show
 		@listing = Listing.find(params[:id])
+		gon.lat = @listing.address_lat
+		gon.lng = @listing.address_lng
 		@user = User.find(@listing.user_id)
 	end
 

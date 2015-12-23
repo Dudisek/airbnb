@@ -226,6 +226,11 @@ GEM
     geocoder (1.2.13)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gon (6.0.1)
+      actionpack (>= 3.0)
+      json
+      multi_json
+      request_store (>= 1.0)
     graticule (2.5.0)
       activesupport
       i18n
@@ -310,6 +315,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
     redis (3.2.2)
+    request_store (1.2.1)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
@@ -384,6 +390,7 @@ DEPENDENCIES
   figaro
   fog
   geocoder
+  gon
   jbuilder (~> 2.0)
   jquery-rails
   jt-rails-address

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Gon for js
+gem 'gon'
 
 # Pagination
 gem 'will_paginate'
