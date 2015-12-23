@@ -1,28 +1,24 @@
 source 'https://rubygems.org'
 
+# PROC server production
+gem 'foreman'
 # Gon for js
 gem 'gon'
-
 # Pagination
 gem 'will_paginate'
-
 # Search
 gem 'elasticsearch-model',
   git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'elasticsearch-rails',
   git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 gem 'tire'
-
 # Payment transaction
 gem "braintree"
-
 # Background server
 gem 'sidekiq'
-
 # Address & Google maps
 gem 'jt-rails-address'
 gem 'geocoder'
-
 #faker
 gem 'faker'
 # Sensitive info
@@ -32,10 +28,8 @@ gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 # Amazon S3
 gem 'fog'
-
 # Tags
 gem 'acts-as-taggable-on'
-
 # lOgin
 gem 'omniauth'
 gem 'omniauth-facebook'

@@ -6,7 +6,6 @@ class BookingsController < ApplicationController
 		@client_token = generate_client_token
 		@booking = Booking.new
 		@booking.listing_id = @listing.id
-		# byebug
 	end
 
 	def create
@@ -18,7 +17,8 @@ class BookingsController < ApplicationController
 	  		payment_method_nonce: params[:payment_method_nonce])
 			if result.success?
 				@booking.save
-				ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
+				# EMAIL
+				# ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
       	redirect_to @booking, notice: "Congraulations! Your transaction has been successfully!" and return
 	  	end
 	  end
@@ -41,6 +41,12 @@ class BookingsController < ApplicationController
 	end
 
 	def show
+		@booking = Booking.find(params[:id])
+		if authorization? (@booking.user.id)
+		else
+		flash[:alert] = "Not authorizate"
+		redirect_to root_url 	
+		end
 	end
 
 	def destroy

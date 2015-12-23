@@ -16,6 +16,10 @@
 //= require datepicker
 //= require i18n/datepicker.en
 //= require jt_address
+//= require jt_address_auto
+//= require scrolling_listing
+//= require g_map_show_listing
+//= require send_message_popup
 
 
 $('#calendar').data('datepicker') //= CALENDAR
@@ -23,49 +27,3 @@ $('#calendar').data('datepicker') //= CALENDAR
 
 
 
-
-// This function is call when Google Maps is loaded
-window.googleMapInitialize = function(){
-
-    // Simple usage
-    $('.jt-address-autocomplete').jt_address();
-};
-
-
-// #LISTING
-// $(window).scroll(function(){
-//   $("#scroll-with-me").stop().animate({"marginTop": ($(window).scrollTop()), "marginLeft":($(window).scrollLeft())}, "slow");
-// });
-
-// $(document).ready(function() {
-//     $('#scroll-with-me').animate(scrollToFixed({ marginTop: 250 }));
-// });
-
-// # MAP
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: gon.lat, lng: gon.lng},
-    zoom: 15
-  });
-}
-
-$('#message').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
-
-
-// # LISTING BOOKING SCROLLING DIFFERENT SOLUTION
-// $(document).ready(function() {
-//   $('#scroll-with-me').scrollToFixed();
-//   $('#map').scrollToFixed( { marginottom: 250, limit: $('').offset().top } );  
-// });
-
-
-//  BELOW JUST JQUERY SLIDER SLIDER SLIDEEEER

@@ -19,7 +19,6 @@ class ListingsController < ApplicationController
 
 	def create
 		@listing = current_user.listings.new(listing_params)
-		byebug
 		if @listing.save
   			redirect_to @listing
   		else
@@ -64,7 +63,7 @@ class ListingsController < ApplicationController
 		@subject = params[:subject]
 		@message = params[:message]
 		@sender = User.find(params[:sender])
-		ReservationJob.perform_later({subject: @subject, message: @message, sender: @sender, listing: @listing, header: "message"})
+		# ReservationJob.perform_later({subject: @subject, message: @message, sender: @sender, listing: @listing, header: "message"})
 		redirect_to listings_path(@listing)
 	end
 
