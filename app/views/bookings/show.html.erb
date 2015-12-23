@@ -1,15 +1,18 @@
 <div class="container">
 <h1>Booking information</h1>
 
-Property: <%= @booking.listing.name%> <br>
-Check-in: <%= @booking.check_in%> <br>
-Check-out: <%= @booking.check_out%> <br>
-Guests: <%= @booking.guests%> <br>
-By : <%= @booking.user.first_name%> <br><br>
+<strong>Property:</strong> <%= @booking.listing.name%> <br>
+<strong>Check-in:</strong> <%= @booking.check_in%> <br>
+<strong>Check-out:</strong> <%= @booking.check_out%> <br>
+<strong>Guests:</strong> <%= @booking.guests%> <br>
+<strong>By:</strong> <%= @booking.user.first_name%> <br><br>
 
-Total cost: <%= @booking.amount%> <br>
+<strong>Total cost:</strong> <%= @booking.amount%> <br>
 
-<br>
+<h3>Contact information</h3>
+<strong>Owner name:</strong> <%=@booking.listing.user.first_name%> <%=@booking.listing.user.last_name%><br>
+<strong>Email:</strong> <%=@booking.listing.user.email%><br>
+<strong>Phone:</strong> <%=@booking.listing.user.phone%><br><br>
 
 <%= link_to 'Edit', edit_booking_path(@booking) %>
 
@@ -17,4 +20,4 @@ Total cost: <%= @booking.amount%> <br>
 <%= link_to 'Cancel booking', booking_path(@booking),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
-</div>
+</div>	

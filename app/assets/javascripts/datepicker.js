@@ -14,7 +14,7 @@ var Datepicker;
         defaults = {
             classes: '',
             inline: false,
-            language: 'ru',
+            language: 'en',
             startDate: new Date(),
             firstDay: '',
             weekends: [6, 0],
@@ -38,7 +38,7 @@ var Datepicker;
             selectOtherYears: true,
             moveToOtherYearsOnSelect: true,
 
-            minDate: '',
+            minDate: new Date(),
             maxDate: '',
             disableNavWhenOutOfRange: true,
 

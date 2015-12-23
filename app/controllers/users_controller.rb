@@ -1,19 +1,34 @@
 class UsersController < Clearance::UsersController
 	def show
-		@user = User.find(params[:id])
+		if authorization? (params[:id])
+			@user = User.find(params[:id])
+		else
+			flash[:alert] = "Not authorizate, you can see just your profile!"
+			redirect_to root_url 
+		end
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		if authorization? (params[:id])
+			@user = User.find(params[:id])
+		else
+			flash[:alert] = "Not authorizate"
+			redirect_to root_url 
+		end
 	end
 
 	def update
-		@user = User.find(params[:id])
-		if @user.update(user_params)
-			redirect_to @user
+		if authorization? (params[:id])
+			@user = User.find(params[:id])
+			if @user.update(user_params)
+				redirect_to @user
+			else
+				render 'edit'
+			end
 		else
-			render 'edit'
-		end
+		flash[:alert] = "Not authorizate"
+		redirect_to root_url 	
+		end	
 	end
 
 	# def destroy
