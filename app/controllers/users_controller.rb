@@ -23,6 +23,7 @@ class UsersController < Clearance::UsersController
 			if @user.update(user_params)
 				redirect_to @user
 			else
+				flash.now[:error] = "Fix it!"
 				render 'edit'
 			end
 		else

@@ -1,0 +1,678 @@
+[2015-12-24 09:25:47,819][INFO ][node                     ] [Freedom Ring] {0.20.6}[82175]: initializing ...
+[2015-12-24 09:25:47,835][INFO ][plugins                  ] [Freedom Ring] loaded [], sites []
+[2015-12-24 09:25:50,749][INFO ][node                     ] [Freedom Ring] {0.20.6}[82175]: initialized
+[2015-12-24 09:25:50,750][INFO ][node                     ] [Freedom Ring] {0.20.6}[82175]: starting ...
+[2015-12-24 09:25:50,924][INFO ][transport                ] [Freedom Ring] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]}
+[2015-12-24 09:25:50,994][WARN ][discovery.zen.ping.multicast] [Freedom Ring] disabled, failed to setup multicast discovery on port [54328], [/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0]: Can't assign requested address
+[2015-12-24 09:25:54,009][INFO ][cluster.service          ] [Freedom Ring] new_master [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-24 09:26:21,001][WARN ][discovery                ] [Freedom Ring] waited for 30s and no initial state was set by the discovery
+[2015-12-24 09:26:21,001][INFO ][discovery                ] [Freedom Ring] elasticsearch/oIhPMy-KQkCvrD73AGxSWQ
+[2015-12-24 09:26:21,008][INFO ][http                     ] [Freedom Ring] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9200]}
+[2015-12-24 09:26:21,008][INFO ][node                     ] [Freedom Ring] {0.20.6}[82175]: started
+[2015-12-24 09:26:24,214][WARN ][cluster.service          ] [Freedom Ring] failed to connect to node [[Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$2.run(InternalClusterService.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 09:26:24,801][INFO ][gateway                  ] [Freedom Ring] recovered [1] indices into cluster_state
+[2015-12-24 09:30:21,311][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 09:34:21,907][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 09:38:22,511][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 09:42:23,113][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 09:46:23,707][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 12:33:53,107][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 12:37:53,711][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 12:41:54,304][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 12:45:54,911][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 12:49:55,508][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 12:53:56,108][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 12:57:56,712][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 13:01:57,309][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 13:05:57,907][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 13:09:58,511][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 14:50:29,578][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 14:54:30,111][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 14:58:30,707][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:02:31,312][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:06:31,912][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:10:32,509][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:14:33,107][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:18:33,708][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:22:34,310][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:26:34,908][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:30:35,506][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:34:36,110][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 15:38:36,705][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 22:55:38,113][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 22:59:38,707][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 23:03:39,312][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 23:07:39,905][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 23:11:40,509][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 23:15:41,111][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 23:19:41,706][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+[2015-12-24 23:23:42,314][WARN ][cluster.service          ] [Freedom Ring] failed to reconnect to node [Freedom Ring][oIhPMy-KQkCvrD73AGxSWQ][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]]
+org.elasticsearch.transport.ConnectTransportException: [Freedom Ring][inet[/fe80:0:0:0:4021:b8ff:fe62:890c%awdl0:9300]] connect_timeout[30s]
+	at org.elasticsearch.transport.netty.NettyTransport.connectToChannels(NettyTransport.java:671)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:610)
+	at org.elasticsearch.transport.netty.NettyTransport.connectToNode(NettyTransport.java:580)
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:127)
+	at org.elasticsearch.cluster.service.InternalClusterService$ReconnectToNodes.run(InternalClusterService.java:395)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: connection timed out
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.processConnectTimeout(NioClientBoss.java:136)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:82)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:41)
+	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more

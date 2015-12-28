@@ -14,11 +14,16 @@ class Listing < ActiveRecord::Base
 
   # after_validation :geocode, :if => :address_formatted_address_changed?
 
-  # validates :body, presence: true
-  # validates :start, presence: true
-  # validates :end, presence: true
-  # validates :num_of_guest, presence: true
-  # validates :room_type, presence: true
+  # INSTALL BOOKABLE GEM
+
+
+
+
+  validates :body, presence: true
+  validates :start, presence: true
+  validates :end, presence: true
+  validates :num_of_guest, presence: true
+  validates :room_type, presence: true
 
   mount_uploaders :picture, PictureUploader
 end
