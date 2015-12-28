@@ -40,10 +40,8 @@ class ListingsController < ApplicationController
 			@listings_near = Listing.where(id: objects.uniq)
 			# @listings_near = Listing.search(params[:search])  # SEARCH BY ELASTIC SEARCH
 			# @listings_near = Listing.near(params[:search], 50, order: "distance") # SEARCH BY DISTANCE
-			# @listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
 		end
-			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
-		
+			@listings = Listing.paginate(:page => params[:page], per_page: 5).order('created_at DESC')
 	end
 
 	def destroy
