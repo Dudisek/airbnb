@@ -9,8 +9,8 @@ class Listing < ActiveRecord::Base
   after_validation :geocode
   geocoded_by :address_formatted_address, :latitude  => :address_lat, :longitude => :address_lng
 
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
+  # include Tire::Model::Search
+  # include Tire::Model::Callbacks
 
   # after_validation :geocode, :if => :address_formatted_address_changed?
 
