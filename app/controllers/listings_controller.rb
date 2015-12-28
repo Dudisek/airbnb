@@ -19,12 +19,12 @@ class ListingsController < ApplicationController
 
 	def create
 		@listing = current_user.listings.new(listing_params)
+		
 		if @listing.save
   			redirect_to @listing
-  		else
-  			flash[:alert] = "We did not find anything. Here is a list you can choose from: "
-  			render 'new'
-  		end
+		else
+			render 'new'
+		end
 	end
 	
 	def show

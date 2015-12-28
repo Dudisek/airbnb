@@ -56,3 +56,62 @@ Caused by: java.lang.IllegalArgumentException: Invalid format: "31/12/2015" is m
 	at org.elasticsearch.common.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:747)
 	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:426)
 	... 14 more
+[2015-12-28 10:28:40,272][INFO ][node                     ] [Nebulon] {0.20.6}[95772]: stopping ...
+[2015-12-28 10:28:40,342][INFO ][node                     ] [Nebulon] {0.20.6}[95772]: stopped
+[2015-12-28 10:28:40,343][INFO ][node                     ] [Nebulon] {0.20.6}[95772]: closing ...
+[2015-12-28 10:28:40,355][INFO ][node                     ] [Nebulon] {0.20.6}[95772]: closed
+[2015-12-28 10:28:43,337][INFO ][node                     ] [Maximoff, Wanda] {0.20.6}[97620]: initializing ...
+[2015-12-28 10:28:43,348][INFO ][plugins                  ] [Maximoff, Wanda] loaded [], sites []
+[2015-12-28 10:28:46,544][INFO ][node                     ] [Maximoff, Wanda] {0.20.6}[97620]: initialized
+[2015-12-28 10:28:46,544][INFO ][node                     ] [Maximoff, Wanda] {0.20.6}[97620]: starting ...
+[2015-12-28 10:28:46,681][INFO ][transport                ] [Maximoff, Wanda] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.20.30:9300]}
+[2015-12-28 10:28:49,756][INFO ][cluster.service          ] [Maximoff, Wanda] new_master [Maximoff, Wanda][qReGjhvdSs2-IGwGp6NX4A][inet[/192.168.20.30:9300]], reason: zen-disco-join (elected_as_master)
+[2015-12-28 10:28:49,937][INFO ][discovery                ] [Maximoff, Wanda] elasticsearch/qReGjhvdSs2-IGwGp6NX4A
+[2015-12-28 10:28:49,959][INFO ][http                     ] [Maximoff, Wanda] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.20.30:9200]}
+[2015-12-28 10:28:49,960][INFO ][node                     ] [Maximoff, Wanda] {0.20.6}[97620]: started
+[2015-12-28 10:28:50,821][INFO ][gateway                  ] [Maximoff, Wanda] recovered [1] indices into cluster_state
+[2015-12-28 10:33:53,370][DEBUG][action.index             ] [Maximoff, Wanda] [listings][4], node[qReGjhvdSs2-IGwGp6NX4A], [P], s[STARTED]: Failed to execute [index {[listings][listing][27], source[{"name":"dsadsa","body":"ddsadsad","start":"31/12/2015","end":"17/02/2016","price":132,"num_of_guest":4,"room_type":"Entire home","picture":[],"address_formatted_address":"","address_street_number":"","address_street_name":"","address_street":"","address_city":"","address_zip_code":"","address_department":"","address_department_code":"","address_state":"","address_state_code":"","address_country":"","address_country_code":"","address_lat":null,"address_lng":null,"user_id":4,"created_at":"2015-12-28T02:33:53.166Z","updated_at":"2015-12-28T02:33:53.166Z"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: Failed to parse [start]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:320)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:587)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:459)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:486)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:430)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:318)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:203)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:532)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:430)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.index.mapper.MapperParsingException: failed to parse date field [31/12/2015], tried both date format [dateOptionalTime], and timestamp number
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:432)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.innerParseCreateField(DateFieldMapper.java:361)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:182)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:307)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: Invalid format: "31/12/2015" is malformed at "/12/2015"
+	at org.elasticsearch.common.joda.time.format.DateTimeFormatter.parseMillis(DateTimeFormatter.java:747)
+	at org.elasticsearch.index.mapper.core.DateFieldMapper.parseStringValue(DateFieldMapper.java:426)
+	... 14 more
+[2015-12-28 10:37:20,540][WARN ][discovery.zen.ping.multicast] [Maximoff, Wanda] failed to read requesting data from /192.168.20.38:54328
+java.io.IOException: Expected handle header, got [18]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readUTF(HandlesStreamInput.java:64)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:401)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-12-28 10:37:21,942][WARN ][discovery.zen.ping.multicast] [Maximoff, Wanda] failed to read requesting data from /192.168.20.38:54328
+java.io.IOException: Expected handle header, got [18]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readUTF(HandlesStreamInput.java:64)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:401)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-12-28 10:37:23,446][WARN ][discovery.zen.ping.multicast] [Maximoff, Wanda] failed to read requesting data from /192.168.20.38:54328
+java.io.IOException: Expected handle header, got [18]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readUTF(HandlesStreamInput.java:64)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:401)
+	at java.lang.Thread.run(Thread.java:745)
