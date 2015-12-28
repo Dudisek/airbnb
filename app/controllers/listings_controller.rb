@@ -36,12 +36,14 @@ class ListingsController < ApplicationController
 
 	def index
 		if params[:search].present?
-			@listings_near = Listing.search(params[:search])
-			# @listings_near = Listing.near(params[:search], 50, order: "distance") 
-			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
-		else
-			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
+			objects = Listing.search(params[:search]).map(&:id) + Listing.near((params[:search]), 50, order: "distance").map(&:id)
+			@listings_near = Listing.where(id: objects.uniq)
+			# @listings_near = Listing.search(params[:search])  # SEARCH BY ELASTIC SEARCH
+			# @listings_near = Listing.near(params[:search], 50, order: "distance") # SEARCH BY DISTANCE
+			# @listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
 		end
+			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
+		
 	end
 
 	def destroy
