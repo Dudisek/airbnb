@@ -11,8 +11,8 @@ class Listing < ActiveRecord::Base
 
   # ELASTIC SEARCH UNCOMMENT TO USE
   
-  # include Tire::Model::Search
-  # include Tire::Model::Callbacks
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
 
 
 

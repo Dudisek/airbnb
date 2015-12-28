@@ -115,3 +115,24 @@ java.io.IOException: Expected handle header, got [18]
 	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
 	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:401)
 	at java.lang.Thread.run(Thread.java:745)
+[2015-12-28 11:58:53,243][WARN ][discovery.zen.ping.multicast] [Maximoff, Wanda] failed to read requesting data from /192.168.20.61:54328
+java.io.IOException: Expected handle header, got [13]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readUTF(HandlesStreamInput.java:64)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:401)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-12-28 11:58:54,025][WARN ][discovery.zen.ping.multicast] [Maximoff, Wanda] failed to read requesting data from /192.168.20.61:54328
+java.io.IOException: Expected handle header, got [13]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readUTF(HandlesStreamInput.java:64)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:401)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-12-28 11:58:56,422][WARN ][discovery.zen.ping.multicast] [Maximoff, Wanda] failed to read requesting data from /192.168.20.61:54328
+java.io.IOException: Expected handle header, got [13]
+	at org.elasticsearch.common.io.stream.HandlesStreamInput.readUTF(HandlesStreamInput.java:64)
+	at org.elasticsearch.cluster.ClusterName.readFrom(ClusterName.java:64)
+	at org.elasticsearch.cluster.ClusterName.readClusterName(ClusterName.java:58)
+	at org.elasticsearch.discovery.zen.ping.multicast.MulticastZenPing$Receiver.run(MulticastZenPing.java:401)
+	at java.lang.Thread.run(Thread.java:745)
