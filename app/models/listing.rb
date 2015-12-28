@@ -11,8 +11,8 @@ class Listing < ActiveRecord::Base
 
   # ELASTIC SEARCH UNCOMMENT TO USE
   
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
+  searchkick text_middle: [:name, :address_formatted_address]
+
 
 
 

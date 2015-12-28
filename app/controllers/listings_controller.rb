@@ -36,8 +36,8 @@ class ListingsController < ApplicationController
 
 	def index
 		if params[:search].present?
-			# @listings_near = Listing.search(params[:search])
-			@listings_near = Listing.near(params[:search], 50, order: "distance") 
+			@listings_near = Listing.search(params[:search])
+			# @listings_near = Listing.near(params[:search], 50, order: "distance") 
 			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
 		else
 			@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
