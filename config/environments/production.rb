@@ -77,5 +77,21 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = { :host => "air-bnb.herokuapp.com" }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.smtp_settings = {   
+    :openssl_verify_mode => OpenSSL::SSL::VERIFY_NONE,      
+    :ssl => true,
+    :enable_starttls_auto => true,  #this is the important stuff!
+    :address        => 'smtp.gmail.com',
+    :port           => 25,
+    :domain         => 'gmail.com',
+    :authentication => :plain,
+    :user_name      => 'dudisek@gmail.com',
+    :password       => ENV['THESECRETMAIL']
+  }
+
 end
