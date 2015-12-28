@@ -73,9 +73,15 @@
 
 					</div>
 				<div>
-					<p class="pull-right">
-						<button type="button" class="btn btn-warning glyphicon glyphicon-envelope" data-toggle="modal" data-target="#message" data-whatever="<%=@listing.user.last_name%>"></button>
-					</p>
+				
+					<%if current_user.present?%>
+						<%= render 'listings/message' %>
+
+						<p class="pull-right">
+							<button type="button" class="btn btn-warning glyphicon glyphicon-envelope" data-toggle="modal" data-target="#message" data-whatever="<%=@listing.user.last_name%>"></button>
+						</p>
+
+					<%end%>
 					<p class="pull-left">
 						<h4 class="glyphicon glyphicon-user"></strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%></h4>
 					</p>
@@ -128,9 +134,7 @@
 						<%end%>
 				</div>
 </div>
-<br><br>
-
-<%= render 'listings/message' %>
+<br>
 <div id="map"> </div>	
 
   <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP']%>  
