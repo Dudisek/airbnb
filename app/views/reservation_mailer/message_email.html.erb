@@ -9,20 +9,16 @@
 		<hr>
 		<p>You have received a message from <strong><%=@sender.first_name%> <%=@sender.last_name%> </strong>for your listing <strong><%=@listing.name%></strong>.</p> 
 
-		<p>
-		Message from <%=@sender.first_name%>:
-		<br>
-		<em><%=@message%></em>
-		<br>
+		<p>Message from <%=@sender.first_name%>:</p>
+		<p><em><%=@message%></em></p>
 		<p>Respond to the user in one of the following ways:</p>
-		<ul>
-		<li>Email: <%=@sender.email%></li>
-		<li>Phone: <%=@sender.phone%>
-		</ul>
+			<ul>
+				<li>Email: <%=@sender.email%></li>
+				<li>Phone: <%=@sender.phone%></li>
+			</ul>
 
-		<p>
-		Thank you
-		</p>
+		<p>Thank you</p>
+		
 		Petr Duda<br>
 		AirBnB Team
 	</body>

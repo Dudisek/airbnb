@@ -3,52 +3,5 @@
  *= require datepicker
  *= require navbar
  *= require footer
- *= require login
  *= require slider
- *= require booking_box_sidebar
 */
-
-.fb {
-    width: 20%;
-    display: block;
-    height: auto; 
-}
-
-.h1-top-margin {
-  margin-top: 0px;
-}
-
-.col-centered{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.search-big {
-  height: 45px;
-}
-
-.user-profile{
-  padding-right: 20px;
-}
-
-
-/* END OF SLIDER */
-
-
-#style-back{
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
-  border-radius: 20px;
-  padding-top: 0px;
-}
-
-#map {
-  height: 50%;
-  width: 100%;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}

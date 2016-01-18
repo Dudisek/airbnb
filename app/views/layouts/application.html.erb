@@ -1,79 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Airbnb</title>
-  <!-- BRAINTREE -->
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>Airbnb</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'https://js.braintreegateway.com/v2/braintree.js', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+  </head>
 
+  <body>
+    <%= render '/navigation/nav' %>
+    <br><br><br>
+    <%= render '/layouts/errors' %>
 
-  <!-- MAP GOOGLE -->
-
-  <meta name="viewport" content="initial-scale=1.0">
-  <meta charset="utf-8">
-  <!-- for JT search -->
-
-  <!-- END MAP GOOGLE -->
-
-</head>
-<body>
-
-
-<%= render '/layouts/navigation' %>
-
-
-<br><br><br>
-
-
-
-  <!-- Nav tabs -->
-<!--   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-  </ul> -->
-
-  <!-- Tab panes -->
-<!--   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">...</div>
-    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
-  </div>
-
-</div> -->
-
-    <div class="container" id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
-    </div>
-
-<!-- Button trigger modal -->
-
-
-<!-- 
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Login-pop">
-    Launch Normal Form
-</button>
- -->
-<!-- Modal -->
-
-
-  <%= yield %>
-
-
-<%= render 'layouts/footer' %>
-
-<!-- <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-</footer> -->
-
-
-</body>
+    <%= yield %>
+    
+    <%= render '/layouts/footer' %>
+  </body>
 </html>

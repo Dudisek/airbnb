@@ -1,3 +1,52 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 50%;
+  width: 100%;
+}
+
+
+.col-centered{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.user-profile{
+  padding-right: 20px;
+}
+/* SING UP */
+.fb {
+    width: 20%;
+    display: block;
+    height: auto; 
+}
+/* SEARCH LANDING PAGE */
+.search-big {
+  height: 45px;
+}
+.h1-top-margin {
+  margin-top: 0px;
+  text-align: center;
+}
+/* BOOKING SIDEBAR */
+.booking-red {
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+#custom-search-input {
+  padding-bottom: 80px;
+  padding-top: 30px;
+}
+
+.booking-details, p {
+  padding: 2px;
+}

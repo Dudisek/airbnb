@@ -1,0 +1,40 @@
+<div class="col-md-4">
+	<div class="booking-red" id="scroll-with-me">
+
+		<div class="sidebar-listing">
+		<h3><strong> <%= @listing.name%></strong></h3>
+		</div>
+
+		<% if @listing.tags.any? %>
+			<% @listing.tags.each do |tag| %>
+			<span class="label label-warning tags"><%= tag %></span>
+			<% end %>
+		<% end %>	
+		<br>
+
+		<br>
+
+		<p>
+			<strong>By:</strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%>
+		</p>
+
+		<p>
+			<strong>Availibility:</strong><br>
+			<%=@listing.start%> - <%=@listing.end%>
+		</p>
+		
+		<p>
+			<strong>City:</strong> <%=@listing.address_city%>
+		</p>
+			
+		<p><strong>Cost per night:</strong></p>
+
+		<p> $ <%= @listing.price %></p>
+		
+		<br>
+		<%= button_to "Book NOW", new_listing_booking_path(@listing), class: "btn btn-danger btn-lg", method: :get %>
+		<br>
+		<%= link_to 'Edit', edit_listing_path(@listing) %>
+
+	</div>
+</div> <!-- col-md-4 -->

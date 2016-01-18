@@ -13,3 +13,8 @@ function initMap() {
   map: map
   });
 }
+
+// JT Map Gem
+window.googleMapInitialize = function(){
+    $('.jt-address-autocomplete').jt_address();
+};

@@ -1,0 +1,17 @@
+<ul class="nav navbar-nav navbar-right">
+  <% if !signed_in? %>
+    <li><a href="sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <%= render '/navigation/login'%>
+  <%else%>
+    <%= render '/navigation/listings'%>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Welcome <%= current_user.first_name %> <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/users/<%=current_user.id%>">Manage Account</a></li>
+        <li role="separator" class="divider"></li>
+        <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
+      </ul>
+    </li>
+  <%end%>
+</ul>

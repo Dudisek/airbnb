@@ -1,0 +1,16 @@
+<div>
+	<%if @listing.nearbys(100).empty?%>
+
+	<%else%>
+
+		<hr>
+		<h3>Nearby places</h3>	
+		<hr>
+
+		<% for listing in @listing.nearbys(100)%>
+		<%= link_to image_tag("#{listing.picture[0].thumb}", class: "img-thumbnail") , listing %>  (<%= listing.distance.round(2) %> km away)
+		<%end%>
+
+	<%end%>
+	<br><br>
+</div>

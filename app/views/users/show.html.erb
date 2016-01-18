@@ -1,39 +1,34 @@
 <div class="container">
-<div class="row">
+	<div class="row">
+
 		<div class="col-md-3">
-
-			  <h1><strong> <%= @user.first_name%> <%=@user.last_name%></strong></h1>
-				<p><strong>Email:</strong> <%=@user.email%></p>
-				<p><strong>Phone:</strong> <%=@user.phone%></p>
-				<p><strong>Born:</strong> <%= @user.birthday%></p>
-				<p><strong>About me</strong></p><p> <%= @user.about %></p>
-
+		  <h1><strong> <%= @user.first_name%> <%=@user.last_name%></strong></h1>
+			<p><strong>Email:</strong> <%=@user.email%></p>
+			<p><strong>Phone:</strong> <%=@user.phone%></p>
+			<p><strong>Born:</strong> <%= @user.birthday%></p>
+			<p><strong>About me</strong></p><p> <%= @user.about %></p>
 			<%= link_to 'Edit', edit_user_path(@user) %>
 		</div> <!-- col-md-6 -->
+
 		<div class="col-md-3">
-		<br>
+			<br>
 			<%= image_tag @user.picture.thumb.url, :class => 'img-thumbnail' if @user.picture?%>
 		</div>
 
-	<div class="col-md-3">
+		<div class="col-md-3">
+			<h3>Your Booking</h3>
+			<%@user.bookings.each do |book| %>
+				<a href="/bookings/<%=book.id%>"><%=book.listing.name%></a><br>
+			<%end%>
+		</div> 	<!-- col-md-3 -->
 
-		<h3>Your Booking</h3>
-		<% @user.bookings.each do |book| %>
-			<a href="/bookings/<%=book.id%>"><%=book.listing.name%></a><br>
-		<%end%>
+		<div class="col-md-3">
+			<h3>Your Listings</h3>
+			<% @user.listings.each do |list| %>
+			<a href="/listings/<%=list.id%>"><%=list.name%></a></br>
+			<%end%>
+		</div> 	<!-- col-md-3 -->
 
-	</div> 	<!-- col-md-3 -->
-
-	<div class="col-md-3">
-
-		<h3>Your Listings</h3>
-		<% @user.listings.each do |list| %>
-		<a href="/listings/<%=list.id%>"><%=list.name%></a></br>
-		<%end%>
-
-	</div> 	<!-- col-md-3 -->
-
-    </div>	
-
+	</div>
 </div>
 

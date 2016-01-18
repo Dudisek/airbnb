@@ -1,47 +1,24 @@
 <div class="container">
-<h2>Book your stay <small>in <%=@listing.name%></small></h2>
-<%= form_for [@listing, @booking] do |f| %>  
-  
+  <h2>Book your stay <small>in <%=@listing.name%></small></h2>
 
-  <p>
-    <%= f.label :check_in %><br>
-    <%= f.date_field :check_in, id: "calendar", class: "datepicker-here", type: "text", placeholder: "Check-in", data: {language: 'en'}  %>
-  </p>
+  <%= form_for [@listing, @booking] do |f| %>  
+    
+    <%= render partial: "form", locals: { f: f }%>
+
+    <%= f.hidden_field :amount, value: @listing.price %>
     <%= f.hidden_field :listing_id, value: @listing.id %>
-  <p>
-    <%= f.label :check_out %><br>
-    <%= f.date_field :check_out, id: "calendar", class: "datepicker-here", type: "text", placeholder: "Check-out", data: {language: 'en'}  %>
-  </p> 
-  <%= f.hidden_field :amount, value: @listing.price %>
-  <p>
-    <%= f.label :guests %><br>
-<%= select(:booking, :guests, [[1], [2], [3], [4], [5], [6], [7], [8]]) %>
-  </p>  
-  <div id="payment-form"></div>
-  <p>
-    <%= f.submit 'Submit', :class => 'btn btn-default' %>
-  </p>
- 
-<% end %>
+    <div id="payment-form"></div>
+    <p>
+      <%= f.submit 'Submit', class: 'btn btn-default' %>
+    </p>
+   
+  <% end %>
  
 <%= link_to 'Back', @listing %>
 </div>
 
 
-<!-- 
-<form id="checkout" method="post" action="/bookings">
-
-
-  <input type="submit" value="Pay $10">
-</form>
- -->
-
-
-
 <script>
-// We generated a client token for you so you can test out this code
-// immediately. In a production-ready integration, you will need to
-// generate a client token on your server (see section below).
 braintree.setup('<%= @client_token %>', "dropin", {
   container: "payment-form"
 });

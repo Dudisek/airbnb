@@ -1,145 +1,22 @@
+<%= include_gon %>
 
 <div class="container">
-<div class="row">
-<%= include_gon %>
-		<h1><%=@listing.name%>, <small><%=@listing.address_city%>, <%=@listing.address_state%></small></h1>
-	<div class="col-md-8">
-		<%= image_tag @listing.picture[0].main.url, class: "img-responsive" if @listing.picture? %>
-
-		<br><br>
-
-  
-		<% @listing.picture.each do |pic| %>
-		    <img  src="<%=pic.thumb.url%>">
-		<%end%>
-
-
 	<div class="row">
-		<div class="col-md-6">
-		<br>
-		<h3> Basic information</h3>
-		<hr>
-				<p>
-				  <strong>Room type:</strong> <%= @listing.room_type %>
-				</p>
-				<hr>
-				<p>
-				  <strong>Number of guests:</strong>
-				  <%= @listing.num_of_guest %>
-				</p>
-				<hr>
-				<p>
-					<strong>Tags: </strong><% @listing.tags.each do |tag| %>
-				<%= tag %>
-				<% end %>
-				</p>
 
-		</div>
-		<div class="col-md-6">
-			<br>
-				<h3>Location</h3>
-				<hr>
-				<p>
-				<strong>Street:</strong> <%= @listing.address_street || @listing.address_street.present?%> 
-				</p>
-				<hr>
-				<p>
-				<strong>City: </strong>
-				<%=@listing.address_city || @listing.address_city.present? %>
-				</p>
-				<hr>
-				<p>
-				<strong>State: </strong>
-				<%=@listing.address_state || @listing.address_state.present?%>
-				</p>
+		<h1><%=@listing.name%>, <small><%=@listing.address_city%>, <%=@listing.address_state%></small></h1>
 
-		</div>
-	</div>
-	<hr>
-					<p>
-				<strong>Avaibility:</strong><br>
-				
-				 From: <%=@listing.start %> To: <%=@listing.end %> 
-				 </p>
-				 <hr>
-				<p><strong>Description:</strong><br></p>
-				<p><%= @listing.body %></p>
-				<hr>
-				<h3>User information</h3>
-				<hr>
-					<div class="pull-left user-profile text-center">
-						<img class="img-circle img-responsive" src="<%=@listing.user.picture.thumb.url%>">
+		<div class="col-md-8">
+			<%= render "listings/show/images" %>
+			<%= render "listings/show/information" %>
+			<%= render "listings/show/user" %>
+		</div> 	<!-- col-md-8 -->
 
+		<%= render "listings/show/sidebar" %>
 
-					</div>
-				<div>
-				
-					<%if current_user.present?%>
-						<%= render 'listings/message' %>
+	</div>   	<!-- row -->
 
-						<p class="pull-right">
-							<button type="button" class="btn btn-warning glyphicon glyphicon-envelope" data-toggle="modal" data-target="#message" data-whatever="<%=@listing.user.last_name%>"></button>
-						</p>
+<%= render "listings/show/nearby" %>
+</div>  	<!-- container -->
 
-					<%end%>
-					<p class="pull-left">
-						<h4 class="glyphicon glyphicon-user"></strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%></h4>
-					</p>
-					
-					<p>
-					<strong>About:</strong> <%=@listing.user.about%>
-					</p>
-				</div>
-				
-				<div class="clearfix"></div>
-
-	</div> 	<!-- col-md-8 -->
-
-	<div class="col-md-4">
-			<div class="booking-red" id="scroll-with-me">
-				<div class="sidebar-listing">
-				<h3><strong> <%= @listing.name%></strong></h3>
-				</div>
-			<% @listing.tags.any? %>
-			<% @listing.tags.each do |tag| %>
-			<span class="label label-warning tags"><%= tag %></span>
-			<% end %>
-			<br><br>
-			<p><strong>By:</strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%>
-				<p><strong>Availibility:</strong><br>
-				<%=@listing.start%> - <%=@listing.end%></p>
-				</p>
-				<p><strong>City:</strong> <%=@listing.address_city%></p>
-				
-				
-				<p><strong>Cost per night:</strong></p><p> £ <%= @listing.price %></p>
-				<%= button_to "Book NOW", new_listing_booking_path(@listing), 
-				      :class => "btn btn-danger btn-lg", :method => :get %>
-
-
-			<%= link_to 'Edit', edit_listing_path(@listing) %>
-			</div>
-	</div> <!-- col-md-4 -->
-
-</div>
-				<div>
-					<%if @listing.nearbys(100).empty?%>
-					<%else%>
-					<hr>
-					<h3>Nearby places</h3>	
-					<hr>
-						<% for listing in @listing.nearbys(100)%>
-						<%= link_to image_tag("#{listing.picture[0].thumb}", class: "img-thumbnail") , listing %>  (<%= listing.distance.round(2) %> km away)
-						<%end%>
-						<%end%>
-				</div>
-</div>
 <br>
-<div id="map"> </div>	
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP']%>  
-&callback=initMap" async defer></script>
-
-
-
-
+<%= render "listings/show/map" %>

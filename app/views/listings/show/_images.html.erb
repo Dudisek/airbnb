@@ -1,0 +1,7 @@
+<%= image_tag @listing.picture[0].main.url, class: "img-responsive" if @listing.picture? %>
+
+<br><br>
+
+<% @listing.picture.each do |pic| %>
+  <img  src="<%=pic.thumb.url%>">
+<%end%>

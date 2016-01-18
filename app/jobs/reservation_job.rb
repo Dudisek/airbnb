@@ -13,11 +13,11 @@ class ReservationJob < ActiveJob::Base
 	
 		if @header == "booking"
 		ReservationMailer.booking_email(@customer, @listing, @booking).deliver_now
-
 		elsif @header == "message"
 		ReservationMailer.message_email(@sender, @subject, @message, @listing).deliver_now
 		end
 	end
+	
 end
 
 

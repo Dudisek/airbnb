@@ -9,20 +9,20 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
+
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+
 //= require datepicker
 //= require i18n/datepicker.en
+
 //= require jt_address
-//= require jt_address_auto
-//= require scrolling_listing
-//= require g_map_show_listing
+//= require googlemaps
+
 //= require send_message_popup
 
-
-$('#calendar').data('datepicker') //= CALENDAR
 
 
 

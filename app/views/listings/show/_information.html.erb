@@ -1,0 +1,64 @@
+<div class="row">
+	<div class="col-md-6">
+
+		<br>
+		<h3> Basic information</h3>
+		<hr>				
+
+		<p>
+			<strong>Room type:</strong> <%= @listing.room_type %>
+		</p>
+
+		<hr>
+
+		<p>
+		  <strong>Number of guests:</strong>
+		  <%= @listing.num_of_guest %>
+		</p>
+
+		<hr>
+		<p>
+			<strong>Tags: </strong><% @listing.tags.each do |tag| %>
+				<%= tag %>
+			<% end %>
+		</p>
+
+	</div>
+
+	<div class="col-md-6">
+		<br>
+		<h3>Location</h3>
+		<hr>
+
+		<p>
+			<strong>Street:</strong> <%= @listing.address_street || @listing.address_street.present?%>
+		</p>
+
+		<hr>
+
+		<p>
+			<strong>City: </strong>
+			<%=@listing.address_city || @listing.address_city.present? %>
+		</p>
+
+		<hr>
+
+		<p>
+			<strong>State: </strong>
+			<%=@listing.address_state || @listing.address_state.present?%>
+		</p>
+
+	</div>
+</div> <!-- end row -->
+
+<hr>
+<p>
+	<strong>Avaibility:</strong><br>
+	 From: <%=@listing.start %> To: <%=@listing.end %> 
+</p>
+<hr>
+
+<p><strong>Description:</strong><br></p>
+<p><%= @listing.body %></p>
+
+<hr>

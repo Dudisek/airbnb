@@ -1,16 +1,8 @@
 <div class="container">
-<h1>Edit Your List</h1>
- 
+	<h1>Edit Your List</h1>
+	<%= render 'form' %>
 
- <%= render 'form' %>
-
-<%= link_to 'Back', listings_path %>
-
-<%= link_to 'Delete', listing_path(@listing),
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %>
-
- 
+	<%= link_to 'Delete', listing_path(@listing),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
 </div>
-
-  <script async type="text/javascript" src="//maps.googleapis.com/maps/api/js?libraries=places&callback=googleMapInitialize"></script>

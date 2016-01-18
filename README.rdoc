@@ -1,3 +1,14 @@
+Braintree Test Transaction:
+Successfull: 4500600000000061
+Unsuccessfull - amount has to be between 2.000 - 3.000: 4000111111111115
+
+- Logged user can send email to the property owner. The property owner will receive an email.
+ 
+- User can see own profile but can't see anyone else profile unless in listing/show
+
+
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the

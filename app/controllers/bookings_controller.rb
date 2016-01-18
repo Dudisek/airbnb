@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-	before_action :set_booking, only: [:edit, :update, :show]
+	before_action :set_booking, only: [:edit, :update, :show, :destroy]
 
 	def new
 		@listing = Listing.find(params[:listing_id])
@@ -10,55 +10,64 @@ class BookingsController < ApplicationController
 
 	def create
 		@booking = current_user.bookings.new(bookings_params)
-		@booking.amount *= (@booking.check_out.to_date - @booking.check_in.to_date).to_i
-		if @booking.valid?
-			result = Braintree::Transaction.sale(
-	  		amount: @booking.amount.to_i,
-	  		payment_method_nonce: params[:payment_method_nonce])
-			if result.success?
-				@booking.save
-				ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
-      	redirect_to @booking, notice: "Congraulations! Your transaction has been successfully!" and return
-	  	end
-	  end
-	  flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
-	  client_token = generate_client_token
-	  render 'new'
-
+		@booking.valid? ? transaction_process : flash[:alert] = @booking.errors.full_messages.first
+	  if flash[:notice].present?
+	  	redirect_to @booking
+	  else
+		  client_token = generate_client_token
+		  @listing = Listing.find(@booking.listing_id)
+		  redirect_to(:back)
+		end
 	end
 
 	def edit
-		@booking = Booking.find(params[:id])
 	end
 
 	def update
 		if @booking.update(bookings_params)
 			redirect_to @booking
 		else
+			flash[:alert] = @booking.errors.full_messages.first
 			render 'edit'
 		end
 	end
 
 	def show
-		@booking = Booking.find(params[:id])
 		if authorization? (@booking.user.id)
 		else
-		flash[:alert] = "Not authorizate"
-		redirect_to root_url 	
+			flash[:alert] = "Not authorizate"
+			redirect_to root_url 	
 		end
 	end
 
 	def destroy
-	  @booking = Booking.find(params[:id])
 	  @booking.destroy
-	 
-	  redirect_to '/'
+	  flash[:notice] = "Your booking was cancelled."
+	  redirect_to root_url
 	end
 
 
 private
 	def bookings_params
 		params.require(:booking).permit(:guests, :check_in, :check_out, :listing_id, :amount)
+	end
+
+	def transaction_process
+		calculate_amount
+		result = Braintree::Transaction.sale(
+  		amount: @booking.amount,
+  		payment_method_nonce: params[:payment_method_nonce])
+		if result.success?
+			@booking.save
+			ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
+    	return flash[:notice] = "Congraulations! Your transaction has been successfully!"
+    else
+    	return flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
+  	end
+	end
+
+	def calculate_amount
+		@booking.amount *= (@booking.check_out.to_date - @booking.check_in.to_date).to_i
 	end
 
 	def set_booking
@@ -68,6 +77,5 @@ private
 	def generate_client_token
 	  Braintree::ClientToken.generate
 	end
-
 
 end

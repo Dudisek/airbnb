@@ -39,34 +39,33 @@ class Clearance::UsersController < ApplicationController
     Clearance.configuration.redirect_url
   end
 
-		def user_from_params
-			first_name = user_params.delete(:first_name)
-			last_name = user_params.delete(:last_name)
-			phone = user_params.delete(:phone)
-			birthday = user_params.delete(:birthday)
-			about = user_params.delete(:about)
-			picture = user_params.delete(:picture)
-		    email = user_params.delete(:email)
-		    password = user_params.delete(:password)
+	def user_from_params
+		first_name = user_params.delete(:first_name)
+		last_name = user_params.delete(:last_name)
+		phone = user_params.delete(:phone)
+		birthday = user_params.delete(:birthday)
+		about = user_params.delete(:about)
+		picture = user_params.delete(:picture)
+	  email = user_params.delete(:email)
+	  password = user_params.delete(:password)
 
+    Clearance.configuration.user_model.new(user_params).tap do |user|
+      user.first_name = first_name
+      user.last_name = last_name
+      user.phone = phone
+      user.birthday = birthday
+      user.about = about
+      user.picture = picture		      
+      user.email = email
+      user.password = password
+    end
+  end
 
-		    Clearance.configuration.user_model.new(user_params).tap do |user|
-		      user.first_name = first_name
-		      user.last_name = last_name
-		      user.phone = phone
-		      user.birthday = birthday
-		      user.about = about
-		      user.picture = picture		      
-		      user.email = email
-		      user.password = password
-		    end
-	  	end
+	def user_params
+    params[:user] || Hash.new
+  end
 
-	  	  def user_params
-		    params[:user] || Hash.new
-		  end
-
-		def permit_params
-		  params.require(:user).permit(:first_name, :last_name, :phone, :birthday, :about, :picture, :email, :password)
-		end
+  def permit_params
+    params.require(:user).permit(:first_name, :last_name, :phone, :birthday, :about, :picture, :email, :password)
+  end
 end
