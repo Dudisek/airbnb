@@ -11,12 +11,12 @@ class BookingsController < ApplicationController
 	def create
 		@booking = current_user.bookings.new(bookings_params)
 		@booking.valid? ? transaction_process : flash[:alert] = @booking.errors.full_messages.first
-	  if flash[:notice].present?
-	  	redirect_to @booking
-	  else
-		  client_token = generate_client_token
-		  @listing = Listing.find(@booking.listing_id)
-		  redirect_to(:back)
+		if flash[:notice].present?
+			redirect_to @booking
+		else
+			client_token = generate_client_token
+			@listing = Listing.find(@booking.listing_id)
+			redirect_to(:back)
 		end
 	end
 
@@ -36,14 +36,14 @@ class BookingsController < ApplicationController
 		if authorization? (@booking.user.id)
 		else
 			flash[:alert] = "Not authorizate"
-			redirect_to root_url 	
+			redirect_to root_url  
 		end
 	end
 
 	def destroy
-	  @booking.destroy
-	  flash[:notice] = "Your booking was cancelled."
-	  redirect_to root_url
+		@booking.destroy
+		flash[:notice] = "Your booking was cancelled."
+		redirect_to root_url
 	end
 
 
@@ -55,15 +55,15 @@ private
 	def transaction_process
 		calculate_amount
 		result = Braintree::Transaction.sale(
-  		amount: @booking.amount,
-  		payment_method_nonce: params[:payment_method_nonce])
+			amount: @booking.amount,
+			payment_method_nonce: params[:payment_method_nonce])
 		if result.success?
 			@booking.save
 			ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
-    	return flash[:notice] = "Congraulations! Your transaction has been successfully!"
-    else
-    	return flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
-  	end
+			flash[:notice] = "Congraulations! Your transaction has been successfully!"
+		else
+			flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
+		end
 	end
 
 	def calculate_amount
@@ -75,7 +75,7 @@ private
 	end
 
 	def generate_client_token
-	  Braintree::ClientToken.generate
+		Braintree::ClientToken.generate
 	end
 
 end

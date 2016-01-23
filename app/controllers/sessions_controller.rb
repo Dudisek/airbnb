@@ -14,7 +14,7 @@ class SessionsController < Clearance::SessionsController
       @notice = "User created - edit your details please..."
     end
     sign_in(user)
-    redirect_to @next, :notice => @notice
+    redirect_to @next, notice: @notice
   end
   
 end
