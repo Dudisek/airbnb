@@ -1,0 +1,8 @@
+<% if @listing.tags.any? %>
+	<% @listing.tags.each do |tag| %>
+		<%= link_to listings_path(tag: tag.name)do %>
+		<span class="label label-warning tags"><%=tag.name%></span>
+		<%end%>
+	<%end%>
+<%end%>	
+<br><br>

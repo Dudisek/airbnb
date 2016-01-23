@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   post "listings/send_email"
 
   resources :listings, shallow: true do
-    get 'tagged' => 'posts#tagged', :as => 'tagged'
     resources :bookings
   end
   resources :users, only: [:show, :edit, :update, :destroy]

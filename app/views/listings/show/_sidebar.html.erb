@@ -5,14 +5,7 @@
 		<h3><strong> <%= @listing.name%></strong></h3>
 		</div>
 
-		<% if @listing.tags.any? %>
-			<% @listing.tags.each do |tag| %>
-			<span class="label label-warning tags"><%= tag %></span>
-			<% end %>
-		<% end %>	
-		<br>
-
-		<br>
+		<%= render "listings/show/sidebar_tags" %>
 
 		<p>
 			<strong>By:</strong> <%=@listing.user.first_name%> <%=@listing.user.last_name%>
@@ -23,12 +16,8 @@
 			<%=@listing.start%> - <%=@listing.end%>
 		</p>
 		
-		<p>
-			<strong>City:</strong> <%=@listing.address_city%>
-		</p>
-			
+		<p><strong>City:</strong> <%=@listing.address_city%></p>
 		<p><strong>Cost per night:</strong></p>
-
 		<p> $ <%= @listing.price %></p>
 		
 		<br>

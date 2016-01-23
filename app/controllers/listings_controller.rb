@@ -33,26 +33,13 @@ class ListingsController < ApplicationController
 	end
 
 	def index
-		if params[:search].present?
-			objects = Listing.search(params[:search]).map(&:id) + Listing.near((params[:search]), 50, order: "distance").map(&:id)
-			@listings_near = Listing.where(id: objects.uniq)
-			# @listings_near = Listing.search(params[:search])  # SEARCH BY ELASTIC SEARCH
-			# @listings_near = Listing.near(params[:search], 50, order: "distance") # SEARCH BY DISTANCE
-		end
+		tag_or_search_params
 		@listings = Listing.paginate(:page => params[:page], per_page: 4).order('created_at DESC')
 	end
 
 	def destroy
 		@listing.destroy
 		redirect_to listings_path
-	end
-
-	def tagged
-	  if params[:tag].present? 
-	    @listings = List.tagged_with(params[:tag])
-	  else 
-	    @listings = List.postall
-	  end
 	end
 
 	def send_email
@@ -79,6 +66,18 @@ private
 		else
 			flash[:alert] = "Something went wrong..."
 			redirect_to root_url
+		end
+	end
+
+	def tag_or_search_params
+		if params[:tag].present?
+			@tag_name = params[:tag]
+			@listing_tags = Listing.tagged_with(params[:tag])
+		elsif params[:search].present?
+			objects = Listing.search(params[:search]).map(&:id) + Listing.near((params[:search]), 50, order: "distance").map(&:id)
+			@listings_near = Listing.where(id: objects.uniq)
+			# @listings_near = Listing.search(params[:search])  # SEARCH BY ELASTIC SEARCH
+			# @listings_near = Listing.near(params[:search], 50, order: "distance") # SEARCH BY DISTANCE
 		end
 	end
 
