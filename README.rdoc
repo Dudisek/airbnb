@@ -1,5 +1,11 @@
 Airbnb Clone website
 
+-------------------------------------
+
+DEMO: www.air-bnb.herokuapp.com
+
+-------------------------------------
+
 Users, Listings, Bookings
 
 -------------------------------------
@@ -47,6 +53,12 @@ Unsuccessfull (amount has to be between 2.000 - 3.000): 4000111111111115
  
 - User can see own profile but can't see anyone else profile unless in listing/show
 ...
+
+-------------------------------------
+
+TODO:
+1. Search by current location (by IP address geocoder)
+2. Whisperer in search bar
 
 -------------------------------------
 
