@@ -1,6 +1,6 @@
 == Airbnb Clone website
 
-DEMO: www.air-bnb.herokuapp.com
+DEMO: http://air-bnb.herokuapp.com/
 
 -------------------------------------
 START: 
@@ -27,13 +27,6 @@ PROCESS TEST TRANSACTION:
 Braintree Test Transaction:
 Successfull: 4500600000000061
 Unsuccessfull (amount has to be between 2.000 - 3.000): 4000111111111115
-
--------------------------------------
-
-- Logged user can send email to the property owner. The property owner will receive an email.
- 
-- User can see own profile but can't see anyone else profile unless in listing/show
-...
 
 -------------------------------------
 
