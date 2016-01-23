@@ -34,4 +34,5 @@ TODO:
 
 1. Search by current location (by IP address geocoder)
 2. Whisperer in search bar
+3. Fix slider to be responsive 
 
