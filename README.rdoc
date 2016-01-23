@@ -1,12 +1,6 @@
-Airbnb Clone website
-
--------------------------------------
+== Airbnb Clone website
 
 DEMO: www.air-bnb.herokuapp.com
-
--------------------------------------
-
-Users, Listings, Bookings
 
 -------------------------------------
 START: 
@@ -15,7 +9,7 @@ START:
 3. Rails server
 4. Foreman start
 
-// you'll need to create application.yml for figaro gem with S3 keys
+// you'll need to create application.yml for figaro gem with S3 keys and braintree keys
 
 -------------------------------------
 
@@ -25,19 +19,6 @@ Elastic Search, Redis, Sidekiq, Amazon S3, Bootstrap, Active Mailer
 
 GEMS: 
 braintree, clearance, geocoder, jt-rails-address, faker, figaro, carrierwave & mini_magick, fog for S3, acts-as-taggable-on, omniauth (for FB), foreman, will_paginate, gon, searchkick, 
-
--------------------------------------
-
-DATABASE: 
-
-User has many Listings
-Listing belongs to User
-
-User has many Bookings
-Booking belongs to User
-
-Listing has many Bookings
-Booking belongs to Listing
 
 -------------------------------------
 
@@ -57,36 +38,7 @@ Unsuccessfull (amount has to be between 2.000 - 3.000): 4000111111111115
 -------------------------------------
 
 TODO:
+
 1. Search by current location (by IP address geocoder)
 2. Whisperer in search bar
 
--------------------------------------
-
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
