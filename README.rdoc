@@ -1,13 +1,54 @@
+Airbnb Clone website
+
+Users, Listings, Bookings
+
+-------------------------------------
+START: 
+1. Bundle install
+2. Rake db:create && rake db:migrate
+3. Rails server
+4. Foreman start
+
+// you'll need to create application.yml for figaro gem with S3 keys
+
+-------------------------------------
+
+APPLICATION:
+
+Elastic Search, Redis, Sidekiq, Amazon S3, Bootstrap, Active Mailer
+
+GEMS: 
+braintree, clearance, geocoder, jt-rails-address, faker, figaro, carrierwave & mini_magick, fog for S3, acts-as-taggable-on, omniauth (for FB), foreman, will_paginate, gon, searchkick, 
+
+-------------------------------------
+
+DATABASE: 
+
+User has many Listings
+Listing belongs to User
+
+User has many Bookings
+Booking belongs to User
+
+Listing has many Bookings
+Booking belongs to Listing
+
+-------------------------------------
+
+PROCESS TEST TRANSACTION: 
+
 Braintree Test Transaction:
 Successfull: 4500600000000061
-Unsuccessfull - amount has to be between 2.000 - 3.000: 4000111111111115
+Unsuccessfull (amount has to be between 2.000 - 3.000): 4000111111111115
+
+-------------------------------------
 
 - Logged user can send email to the property owner. The property owner will receive an email.
  
 - User can see own profile but can't see anyone else profile unless in listing/show
+...
 
-
-
+-------------------------------------
 
 == README
 
