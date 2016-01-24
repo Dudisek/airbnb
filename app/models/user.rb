@@ -2,19 +2,19 @@ class User < ActiveRecord::Base
 
   include Clearance::User
   
-  has_many :authentications, :dependent => :destroy
+  has_many :authentications, dependent: :destroy
   has_many :listings
   has_many :bookings
 
   mount_uploader :picture, PictureUploader
 
-  validates :email, presence: true, format: { with: /\w@\w{1}+[.]\w{2}/}, :uniqueness => true
+  validates :email, presence: true, format: { with: /\w@\w{1}+[.]\w{2}/}, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates_format_of :phone, with:  /\d[0-9]\)*\z/ , message: "Only positive number without spaces are allowed"
   validates_inclusion_of :birthday,
-    :in => Date.new(1900)..Time.now.years_ago(15).to_date,
-    :message => 'Too young! Wait couple of years...'
+    in: Date.new(1900)..Time.now.years_ago(15).to_date,
+    message: 'Too young! Wait couple of years...'
 
   
   def self.create_with_auth_and_hash(authentication,auth_hash)

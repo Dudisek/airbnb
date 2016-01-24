@@ -31,21 +31,21 @@
 		<hr>
 
 		<p>
-			<strong>Street:</strong> <%= @listing.address_street || @listing.address_street.present?%>
+			<strong>Street:</strong> <%= @listing.address_street if @listing.address_street%>
 		</p>
 
 		<hr>
 
 		<p>
 			<strong>City: </strong>
-			<%=@listing.address_city || @listing.address_city.present? %>
+			<%=@listing.address_city if @listing.address_city %>
 		</p>
 
 		<hr>
 
 		<p>
 			<strong>State: </strong>
-			<%=@listing.address_state || @listing.address_state.present?%>
+			<%=@listing.address_state if @listing.address_state%>
 		</p>
 
 	</div>
@@ -54,7 +54,7 @@
 <hr>
 <p>
 	<strong>Avaibility:</strong><br>
-	 From: <%=@listing.start %> To: <%=@listing.end %> 
+	 From: <%=@listing.start %> To: <%=@listing.end %>
 </p>
 <hr>
 

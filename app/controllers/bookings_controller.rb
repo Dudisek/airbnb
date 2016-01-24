@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
 	def create
 		@booking = current_user.bookings.new(bookings_params)
 		@booking.valid? ? transaction_process : flash[:alert] = @booking.errors.full_messages.first
-		if flash[:notice].present?
+		if flash[:notice]
 			redirect_to @booking
 		else
 			client_token = generate_client_token
@@ -59,7 +59,12 @@ private
 			payment_method_nonce: params[:payment_method_nonce])
 		if result.success?
 			@booking.save
-			ReservationJob.perform_later(customer: @booking.user, listing: @booking.listing, booking: @booking, header: "booking")
+			ReservationJob.perform_later(
+				customer: @booking.user, 
+				listing: @booking.listing, 
+				booking: @booking, 
+				header: "booking"
+			)
 			flash[:notice] = "Congraulations! Your transaction has been successfully!"
 		else
 			flash[:alert] = "Something went wrong while processing your transaction. Please try again!"

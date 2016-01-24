@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :bookings
   end
   resources :users, only: [:show, :edit, :update, :destroy]
-  
+
   # resources 
 
 

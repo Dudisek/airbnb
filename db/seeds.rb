@@ -14,7 +14,7 @@ end
 
 # SEED LISTING
 10.times do
-Listing.create(name: Faker::Book.title, body: Faker::Lorem.paragraph, 
+Listing.create(name: Faker::Book.title, body: Faker::Lorem.paragraph,
 				start: Faker::Time.between(DateTime.now - 1, DateTime.now),
 				end: Faker::Time.between(DateTime.now - 1, DateTime.now),
 				price: Faker::Number.between(1, 10),

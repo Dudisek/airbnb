@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 	def authorization? (id)
-		current_user.id == id.to_i if current_user.present?
+		current_user.id == id.to_i if current_user
 	end
 
 	def flash_class(level)

@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Book your stay <small>in <%=@listing.name%></small></h2>
 
-  <%= form_for [@listing, @booking] do |f| %>  
+  <%= form_for [@listing, @booking] do |f| %>
     
     <%= render partial: "form", locals: { f: f }%>
 

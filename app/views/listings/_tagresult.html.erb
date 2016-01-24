@@ -1,5 +1,5 @@
 <div class="row">	
-	<% if @listing_tags.present? %>
+	<% if @listing_tags %>
 		<h2><%="Result".pluralize(@listing_tags.count)%> for tag "<%=@tag_name%>"</h2>
 		<% @listing_tags.each do |list| %>
 	  	<div class="col-lg-2 col-sm-3 col-xs-4">

@@ -1,4 +1,4 @@
-<% if !@listings_near.nil? %>
+<% if @listings_near %>
 	<% if !@listings_near.empty?%>
 
 		<h2>We found <%=@listings_near.size%> results...</h2>
@@ -15,6 +15,5 @@
 
 	<% else %>
 		<h3> We did not find anything, sorry. Check all of our listings </h3>	
-	<%end%>		
-<%else%>
+	<%end%>
 <%end%>

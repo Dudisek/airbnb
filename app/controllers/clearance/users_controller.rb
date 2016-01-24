@@ -56,7 +56,7 @@ class Clearance::UsersController < ApplicationController
       user.phone = phone
       user.birthday = birthday
       user.about = about
-      user.picture = picture		      
+      user.picture = picture
       user.email = email
       user.password = password
     end
