@@ -1,14 +1,14 @@
-<p>
-  <%= f.label :check_in %><br>
-  <%= f.date_field :check_in, id: "calendar", class: "datepicker-here", type: "text", placeholder: "Check-in", data: {language: 'en'}  %>
-</p>
+<div class="form-group">
+  <%= f.label "Check in: " %><br>
+  <%= f.date_field :check_in, id: "calendar", class: "datepicker-here form-control", type: "text", placeholder: "Check-in", data: {language: 'en'}  %>
+</div>
 
-<p>
-  <%= f.label :check_out %><br>
-  <%= f.date_field :check_out, id: "calendar", class: "datepicker-here", type: "text", placeholder: "Check-out", data: {language: 'en'}  %>
-</p>
+<div class="form-group">
+  <%= f.label "Check out: " %><br>
+  <%= f.date_field :check_out, id: "calendar", class: "datepicker-here form-control", type: "text", placeholder: "Check-out", data: {language: 'en'}  %>
+</div>
 
-<p>
-  <%= f.label :guests %><br>
+<div class="form-group">
+  <%= f.label "Guests: " %><br>
   <%= select(:booking, :guests, [[1], [2], [3], [4], [5], [6], [7], [8]]) %>
-</p>  
+</div>

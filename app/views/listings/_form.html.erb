@@ -1,66 +1,13 @@
 <%= form_for @listing, html: {multipart: true} do |f| %>
-  <p>
+  <div class="form-group">
     <%= f.label :name_of_your_place %>: 
-    <%= f.text_field :name %>
-  </p>
-  
-  <%= f.label :avaibility %>
-  <p>
-    <%= f.date_field :start, id: "calendar", class: "datepicker-here", type: "text", placeholder: "From", data: {language: 'en'} %>
-
-    <%= f.date_field :end, id: "calendar", class: "datepicker-here", type: "text", placeholder: "To", data: {language: 'en'}%>
-  </p>
-
-  <p>
-    <%= f.label :price %>: $
-    <%= f.number_field :price %>
-  </p>
-
-  <div class="bfh-selectbox">  
-    <%= f.label :number_of_guests %>: 
-    <%= select(:listing, :num_of_guest, [[1], [2], [3], [4], [5], [6], [7], [8]]) %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
-
-  <p>
-    <div class="btn-group" data-toggle="buttons">
-
-      <%= f.label :room_type %><br>
-      <%= label_tag(:room_home, "Entire Home", class: "btn btn-default inactive btn-sm", autocomplete: "off") do %> 
-      <%= radio_button "listing" ,:room_type, "Entire home"%>
-      Entire Home
-     <%end%>
-
-      <%= label_tag(:room_private, "Private room", class: "btn btn-default inactive btn-sm") do %> 
-      <%= radio_button "listing", :room_type, "Private room" %>
-      Private Home
-      <%end%>
-
-      <%= label_tag(:room_shared, "Shared room", class: "btn btn-default inactive btn-sm") do %> 
-      Shared Room
-      <%= radio_button "listing", :room_type, "Shared room"%>
-      <%end%>
-    </div>
-  </p>
-
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :body, class: "form_control", rows: 3, placeholder: "Tell us something about you & your place." %>
-  </p>
-
-  <p>
-    <%= f.label :pictures %>: 
-    <%= f.file_field :picture, class: "btn btn-default btn-sm", value: "Choose photos", multiple: true, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
-  </p>
-
-  <p>
-    <%= f.label :tags %>: 
-    <%= f.text_field :tag_list, placeholder: "Separate by commas" %>
-  </p>
-            
-  <div class="jt-address-autocomplete">
+  
+  <div class="jt-address-autocomplete form-group">
     <%= f.label :address %>: 
     <!-- This field is used to search the address on Google Maps -->
-    <%= f.text_field :address, class: 'jt-address-search' %>
+    <%= f.text_field :address, class: 'jt-address-search form-control' %>
 
     <!-- All fields are hidden because the javascript will set their value automatically -->
     <% for attr in JT::Rails::Address.fields %>
@@ -68,10 +15,62 @@
     <% end %>
   </div>
 
-  <br>
+  <%= f.label :avaibility %>
+  <div class="form-group row">
+    <div class="col-md-6">
+      <%= f.date_field :start, id: "calendar", class: "datepicker-here form-control", type: "text", placeholder: "From", data: {language: 'en'} %>
+    </div>
+    <div class="col-md-6">
+      <%= f.date_field :end, id: "calendar", class: "datepicker-here form-control", type: "text", placeholder: "To", data: {language: 'en'}%>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">  
+      <%= f.label :number_of_guests %>: 
+      <%= select(:listing, :num_of_guest, [[1], [2], [3], [4], [5], [6], [7], [8]], class: "form-contorl") %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= f.label :price %>: $
+      <%= f.number_field :price, class: "form-control"%>
+    </div>    
+  </div>
+
+  <div class="btn-group form-group btn-group-lg" data-toggle="buttons">
+    <%= label_tag(:room_home, "Entire Home", class: "btn btn-default inactive btn-sm", autocomplete: "off") do %> 
+      <%= radio_button "listing" ,:room_type, "Entire home"%>
+      Entire Home
+    <%end%>
+
+    <%= label_tag(:room_private, "Private room", class: "btn btn-default inactive btn-sm") do %> 
+      <%= radio_button "listing", :room_type, "Private room" %>
+      Private Home
+    <%end%>
+    <%= label_tag(:room_shared, "Shared room", class: "btn btn-default inactive btn-sm") do %> 
+      <%= radio_button "listing", :room_type, "Shared room"%>
+      Shared Room
+    <%end%>
+
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :body, class: "form-control", rows: 3, placeholder: "Tell us something about you & your place." %>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <%= f.label :pictures %>: 
+      <%= f.file_field :picture, class: "btn btn-default btn-sm", value: "Choose photos", multiple: true, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
+    </div>
+
+    <div class="form-group col-md-6">
+      <%= f.label :tags %>: 
+      <%= f.text_field :tag_list, class: "form-control", placeholder: "Separate by commas" %>
+    </div>
+  </div>
   
   <p>
-    <%= f.submit type: 'submit', class: "btn btn-danger" %>
+    <%= f.submit type: 'submit', class: "btn btn-danger btn-lg" %>
   </p>
          
 <% end %> 

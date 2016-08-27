@@ -17,15 +17,23 @@
 
 		<div class="col-md-3">
 			<h3>Your Booking</h3>
-			<%@user.bookings.each do |book| %>
-				<a href="/bookings/<%=book.id%>"><%=book.listing.name%></a><br>
+			<% if @user.bookings.count > 0 %>
+				<%@user.bookings.each do |book| %>
+					<a href="/bookings/<%=book.id%>"><%=book.listing.name%></a><br>
+				<%end%>
+			<%else%>
+				<p>You don't have any bookings yet. <%=button_to "Book now", listings_path, method: :get, class: "btn btn-danger"%>.</p>
 			<%end%>
 		</div> 	<!-- col-md-3 -->
 
 		<div class="col-md-3">
 			<h3>Your Listings</h3>
-			<% @user.listings.each do |list| %>
-			<a href="/listings/<%=list.id%>"><%=list.name%></a></br>
+			<% if @user.listings.count > 0 %>
+				<% @user.listings.each do |list| %>
+				<a href="/listings/<%=list.id%>"><%=list.name%></a></br>
+				<%end%>
+			<%else%>
+				<p>You don't have any listings yet. <%=button_to "Add now", new_listing_path, method: :get, class: "btn btn-danger"%>.</p>
 			<%end%>
 		</div> 	<!-- col-md-3 -->
 

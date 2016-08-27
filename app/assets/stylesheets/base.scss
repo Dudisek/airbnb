@@ -24,9 +24,9 @@ html, body {
 }
 /* SING UP */
 .fb {
-    width: 20%;
+    width: 50%;
     display: block;
-    height: auto; 
+
 }
 /* SEARCH LANDING PAGE */
 .search-big {
@@ -49,4 +49,14 @@ html, body {
 
 .booking-details, p {
   padding: 2px;
+}
+
+.classic-form {
+  max-width: 600px;
+  margin: 20px auto;
+  -webkit-box-shadow: 5px 5px 50px 3px rgba(173,173,173,0.36);
+  -moz-box-shadow: 5px 5px 50px 3px rgba(173,173,173,0.36);
+  box-shadow: 5px 5px 50px 3px rgba(173,173,173,0.36);
+  padding: 20px;
+
 }

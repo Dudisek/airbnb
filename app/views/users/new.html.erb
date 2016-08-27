@@ -1,15 +1,16 @@
 <div class="container">
-	<div id="clearance" class="sign-up">
-	  <p>
-	    <a href="/auth/facebook"><img class="fb" src="/img/fbconnect.png" /></a>
-	  </p>
+	<div class="classic-form">
+		<div id="clearance" class="sign-up">
 
-	  <h2><%= t(".title") %></h2>
+		  <h2 class="center"><%= t(".title") %></h2>
+		  <br />
+	    <a href="/auth/facebook"><img class="fb right" src="/img/fbconnect.png" /></a>		  
+	    <br />
+		  <%= form_for @user do |form| %>
+		    <%= render partial: '/users/form', object: form %>
+		    <%= link_to t(".sign_in"), sign_in_path %>
+		  <% end %>
 
-	  <%= form_for @user do |form| %>
-	    <%= render partial: '/users/form', object: form %>
-	    <%= link_to t(".sign_in"), sign_in_path %>
-	  <% end %>
-
+		</div>
 	</div>
 </div>

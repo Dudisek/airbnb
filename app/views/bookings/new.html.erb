@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container classic-form">
   <h2>Book your stay <small>in <%=@listing.name%></small></h2>
 
   <%= form_for [@listing, @booking] do |f| %>
@@ -9,7 +9,7 @@
     <%= f.hidden_field :listing_id, value: @listing.id %>
     <div id="payment-form"></div>
     <p>
-      <%= f.submit 'Submit', class: 'btn btn-default' %>
+      <%= f.submit 'Submit', class: 'btn btn-danger btn-lg' %>
     </p>
    
   <% end %>

@@ -1,44 +1,54 @@
-<div class="text-field">
-  <%= form.label :first_name %>
-  <%= form.text_field :first_name %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :first_name %>
+      <%= form.text_field :first_name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name, class: "form-control" %>
+    </div>
+  </div>
 </div>
 
-<div class="text-field">
-  <%= form.label :last_name %>
-  <%= form.text_field :last_name %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :birthday %>
+      <%= form.date_field :birthday, class: "form-control" %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :phone %>
+      <%= form.telephone_field :phone, class: "form-control" %>
+    </div>
+  </div>
 </div>
 
-<div class="text-field">
+<div class="form-group">
   <%= form.label :email %>
-  <%= form.text_field :email, type: 'email' %>
+  <%= form.text_field :email, type: 'email', class: "form-control" %>
 </div>
 
-<div class="text-field">
-  <%= form.label :birthday %>
-  <%= form.date_field :birthday %>
-</div>
-
-<div class="text-field">
-  <%= form.label :phone %>
-  <%= form.telephone_field :phone %>
-</div>
-
-<div class="text-field">
+<div class="form-group">
   <%= form.label :about %><br>
-  <%= form.text_area :about %>
+  <%= form.text_area :about, class: "form-control" %>
 </div>
 
-<div class="text-field">
+<div class="form-group">
   <%= form.label :picture %>
-  <%= form.file_field :picture, accept: 'image/jpeg, image/jpg, image/gif, image/png' %>
+  <%= form.file_field :picture, accept: 'image/jpeg, image/jpg, image/gif, image/png', class: "form-control" %>
 </div>
 
-<div class="password-field">
+<div class="form-group">
   <%= form.label :password %>
-  <%= form.password_field :password %>
+  <%= form.password_field :password, class: "form-control" %>
 </div>
 
-<div class="submit-field">
-  <%= form.submit %>
+<div class="form-group">
+  <%= form.submit class: "btn btn-danger btn-lg" %>
 </div>
 

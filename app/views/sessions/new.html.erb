@@ -1,18 +1,18 @@
-<div id="clearance" class="container">
+<div id="clearance" class="container classic-form">
   <h2><%= t(".title") %></h2>
   <%= form_for :session, url: session_path do |form| %>
-	  <div class="text-field">
+	  <div class="form-group">
 	    <%= form.label :email %>
-	    <%= form.text_field :email, type: 'email' %>
+	    <%= form.text_field :email, type: 'email', class: "form-control" %>
 	  </div>
 
-	  <div class="password-field">
+	  <div class="form-group">
 	    <%= form.label :password %>
-	    <%= form.password_field :password %>
+	    <%= form.password_field :password, class: "form-control" %>
 	  </div>
 
-	  <div class="submit-field">
-	    <%= form.submit %>
+	  <div class="form-group">
+	    <%= form.submit class: "btn btn-lg btn-danger" %>
 	  </div>
 
 	  <div class="other-links">

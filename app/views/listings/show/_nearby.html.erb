@@ -1,5 +1,5 @@
 <div>
-	<%if !@listing.nearbys(100).empty?%>
+	<%if @listing.nearbys(100).present?%>
 	
 		<hr>
 		<h3>Nearby places</h3>	
